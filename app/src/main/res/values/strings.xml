@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Beosis4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_view">Image View</string>
+    <string name="text_view">Text View</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_signin">SigninActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="reset">Reset</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="don_t_have_account_yet">Don’t have account yet ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="helping_you_finding_scholarship_to_study_abroad">Helping you finding scholarship to study abroad.</string>
+    <string name="beosis">Beosis</string>
+    <string name="send_email">Send Email</string>
+    <string name="edit_text">Edit Text</string>
+    <string name="error_text">Please enter, its error</string>
+    <string name="text_user">Users</string>
+    <string name="error_register">Register Failed</string>
+    <string name="deadline_07_january_2022">Deadline : 07 January 2022</string>
+    <string name="undergraduate">Undergraduate</string>
+    <string name="south_korea">South Korea</string>
+    <string name="korea_advanced_institute">Korea Advanced Institute</string>
+    <string name="kaist">KAIST</string>
+    <string name="txt_error">Not empty</string>
+    <string name="txt_error_password">Password Mismatch</string>
+    <string name="txt_user">User</string>
+    <string name="txt_error_register">Register Failed</string>
+
+
+</resources>

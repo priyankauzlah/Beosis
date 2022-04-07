@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "592486913270",
+    "project_id": "beosis-782b0",
+    "storage_bucket": "beosis-782b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592486913270:android:84b429d0d7435e85b648d7",
+        "android_client_info": {
+          "package_name": "com.uzlahalya.beosis4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592486913270-ojar710v339dq8ds4v23qk6lhth40kso.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uzlahalya.beosis4",
+            "certificate_hash": "d66d6a93f666811f17aa77685228c0ef8556ce83"
+          }
+        },
+        {
+          "client_id": "592486913270-fsucc4avlidlg9t568lvegiodosertgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6LooaeoOCX4u6xTycksjIkzkJqSQeUAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592486913270-fsucc4avlidlg9t568lvegiodosertgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
