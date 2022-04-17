@@ -40,6 +40,10 @@
     <string name="txt_error_password">Password Mismatch</string>
     <string name="txt_user">User</string>
     <string name="txt_error_register">Register Failed</string>
+    <string name="interested_country">Interested Country</string>
+    <string name="name">Name</string>
+    <string name="log_out">Log Out</string>
+    <string name="interested_major">Interested Major</string>
 
 
 </resources>
