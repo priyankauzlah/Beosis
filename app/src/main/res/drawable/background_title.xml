@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="76dp"
+    android:viewportWidth="360"
+    android:viewportHeight="76">
+    <path
+        android:fillColor="#4DC4C4C4"
+        android:pathData="M0 15h360v41c0 8.28-6.72 15-15 15H15C6.72 71 0 64.28 0 56V15Z"/>
+    <group>
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M0 9h360v41c0 8.28-6.72 15-15 15H15C6.72 65 0 58.28 0 50V9Z"/>
+    </group>
+</vector>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    &lt;!&ndash;the shadow comes from here&ndash;&gt;-->
+<!--    <item-->
+<!--        android:bottom="0dp"-->
+<!--        android:drawable="@android:drawable/dialog_holo_light_frame"-->
+<!--        android:left="10dp"-->
+<!--        android:right="0dp"-->
+<!--        android:top="0dp">-->
+
+<!--    </item>-->
+
+<!--&lt;!&ndash;    <item&ndash;&gt;-->
+<!--&lt;!&ndash;        android:bottom="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:left="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:right="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:top="0dp">&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash;whatever you want in the background, here i preferred solid white &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <shape android:shape="rectangle">&ndash;&gt;-->
+<!--&lt;!&ndash;            <solid android:color="@android:color/white" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </shape>&ndash;&gt;-->
+<!--&lt;!&ndash;    </item>&ndash;&gt;-->
+
+<!--    <vector-->
+<!--        android:width="360dp"-->
+<!--        android:height="67dp"-->
+<!--        android:viewportWidth="360"-->
+<!--        android:viewportHeight="67"-->
+<!--        android:drawable="@android:drawable/dialog_holo_light_frame"-->
+<!--        >-->
+<!--        <group>-->
+<!--            <path-->
+<!--                android:fillColor="#FFFFFFFF"-->
+<!--                android:pathData="M0 0h360v41c0 8.28-6.72 15-15 15H15C6.72 56 0 49.28 0 41V0Z"/>-->
+<!--        </group>-->
+<!--    </vector>-->
+<!--</layer-list>-->
