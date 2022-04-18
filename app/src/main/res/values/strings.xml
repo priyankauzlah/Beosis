@@ -44,6 +44,10 @@
     <string name="name">Name</string>
     <string name="log_out">Log Out</string>
     <string name="interested_major">Interested Major</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="explore_more">Explore More</string>
+    <string name="profile">Profile</string>
+    <string name="calendar">Calendar</string>
 
 
 </resources>

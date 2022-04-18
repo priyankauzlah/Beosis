@@ -6,39 +6,358 @@
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:autofillHints="Search Here"
+            android:background="@drawable/background_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="Search" />
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/sv_main"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_50dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginEnd="@dimen/_20dp"
-                android:autofillHints="Search Here"
-                android:background="@drawable/background_search"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:queryHint="Search" />
+        <TextView
+            android:id="@+id/tv_most_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/most_popular"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/sv_main"
+            app:layout_constraintTop_toBottomOf="@+id/sv_main" />
 
-            <TextView
-                android:id="@+id/tv_most_popular"
+        <HorizontalScrollView
+            android:id="@+id/hsv_most_popular"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_most_popular">
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Most Popular"
-                android:textSize="18dp"
-                app:layout_constraintStart_toStartOf="@+id/sv_main"
-                app:layout_constraintTop_toBottomOf="@+id/sv_main" />
+                android:orientation="horizontal">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                <RelativeLayout
+                    android:id="@+id/popular_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@drawable/background_item"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_popular_1"
+                        android:layout_width="127dp"
+                        android:layout_height="143dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:contentDescription="@string/image_view"
+                        android:scaleType="centerCrop"
+                        tools:srcCompat="@tools:sample/avatars"/>
+
+                    <TextView
+                        android:id="@+id/tv_title_popular_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iv_image_popular_1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_bold"
+                        android:maxLines="1"
+                        android:text="@string/kaist"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_uni_popular_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title_popular_1"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:maxLines="1"
+                        android:text="@string/korea_advanced_institute"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_country_popular_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_uni_popular_1"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:maxLines="1"
+                        android:text="@string/south_korea"
+                        android:textColor="#858585"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_level_popular_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_country_popular_1"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_1"
+                        android:background="@drawable/background_item_degree"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/undergraduate"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_level_popular_1"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_1"
+                        android:background="@drawable/background_deadline"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:text="@string/deadline_07_january_2022"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/popular_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:background="@drawable/background_item"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_popular_2"
+                        android:layout_width="127dp"
+                        android:layout_height="143dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:contentDescription="@string/image_view"
+                        android:scaleType="centerCrop"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/tv_title_popular_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iv_image_popular_2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_bold"
+                        android:maxLines="1"
+                        android:text="@string/kaist"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_uni_popular_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title_popular_2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:maxLines="1"
+                        android:text="@string/korea_advanced_institute"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_country_popular_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_uni_popular_2"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:maxLines="1"
+                        android:text="@string/south_korea"
+                        android:textColor="#858585"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_level_popular_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_country_popular_2"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_2"
+                        android:background="@drawable/background_item_degree"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/undergraduate"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_level_popular_2"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_2"
+                        android:background="@drawable/background_deadline"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:text="@string/deadline_07_january_2022"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/popular_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:background="@drawable/background_item"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_popular_3"
+                        android:layout_width="127dp"
+                        android:layout_height="143dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:contentDescription="@string/image_view"
+                        android:scaleType="centerCrop"
+                        tools:srcCompat="@tools:sample/avatars"/>
+
+                    <TextView
+                        android:id="@+id/tv_title_popular_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iv_image_popular_3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_3"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_bold"
+                        android:maxLines="1"
+                        android:text="@string/kaist"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_uni_popular_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title_popular_3"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_3"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:maxLines="1"
+                        android:text="@string/korea_advanced_institute"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_country_popular_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_uni_popular_3"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_3"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:maxLines="1"
+                        android:text="@string/south_korea"
+                        android:textColor="#858585"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_level_popular_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_country_popular_3"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_3"
+                        android:background="@drawable/background_item_degree"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/undergraduate"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_level_popular_3"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_toEndOf="@+id/iv_image_popular_3"
+                        android:background="@drawable/background_deadline"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:text="@string/deadline_07_january_2022"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_explore_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/explore_more"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_most_popular"
+            app:layout_constraintTop_toBottomOf="@+id/hsv_most_popular" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_explore_more"
+            tools:listitem="@layout/item_scholarship" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="@dimen/_10dp"
+    android:background="@drawable/background_item">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_image_item_scholar"
+            android:layout_width="127dp"
+            android:layout_height="143dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:contentDescription="@string/image_view"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_title_item_scholar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_image_item_scholar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toEndOf="@+id/iv_image_item_scholar"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:text="@string/kaist"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_uni_item_scholar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_item_scholar"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toEndOf="@+id/iv_image_item_scholar"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="1"
+            android:text="@string/korea_advanced_institute"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_country_item_scholar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_uni_item_scholar"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toEndOf="@+id/iv_image_item_scholar"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="1"
+            android:text="@string/south_korea"
+            android:textColor="#858585"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_level_item_scholar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_country_item_scholar"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toEndOf="@+id/iv_image_item_scholar"
+            android:background="@drawable/background_item_degree"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/undergraduate"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_level_item_scholar"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toEndOf="@+id/iv_image_item_scholar"
+            android:background="@drawable/background_deadline"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="@string/deadline_07_january_2022"
+            android:textColor="@color/black"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
