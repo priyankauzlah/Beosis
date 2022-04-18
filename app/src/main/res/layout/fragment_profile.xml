@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_name_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_name_profile"
+            android:layout_width="338dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/background_search"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_profile"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_profile" />
+
+        <TextView
+            android:id="@+id/txt_interested_country_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/interested_country"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_profile"
+            app:layout_constraintTop_toBottomOf="@+id/et_name_profile" />
+
+        <EditText
+            android:id="@+id/et_interested_country_profile"
+            android:layout_width="338dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/background_search"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_interested_country_profile"
+            app:layout_constraintTop_toBottomOf="@+id/txt_interested_country_profile" />
+
+        <TextView
+            android:id="@+id/txt_interested_major_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/interested_major"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/et_interested_country_profile"
+            app:layout_constraintTop_toBottomOf="@+id/et_interested_country_profile" />
+
+        <EditText
+            android:id="@+id/et_interested_major_profile"
+            android:layout_width="338dp"
+            android:layout_height="50dp"
+            android:background="@drawable/background_search"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/txt_interested_major_profile"
+            app:layout_constraintTop_toBottomOf="@+id/txt_interested_major_profile" />
+
+        <Button
+            android:id="@+id/et_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50dp"
+            android:background="@drawable/background_button_green"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/log_out"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_interested_major_profile"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/et_interested_major_profile"
+            app:layout_constraintTop_toBottomOf="@+id/et_interested_major_profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
