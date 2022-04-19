@@ -12,4 +12,10 @@
     <color name="green">#B2D93B</color>
     <color name="yellow">#FECE42</color>
     <color name="grey">#B1B1B1</color>
+
+    //chip color
+    <color name="checkedChipBackgroundColor">#713EDD</color>
+    <color name="chipBackgroundColor">#56E9E9E9</color>
+    <color name="checkedChipTextColor">@color/white</color>
+    <color name="chipTextColor">#713EDD</color>
 </resources>

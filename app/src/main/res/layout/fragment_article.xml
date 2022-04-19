@@ -17,7 +17,7 @@
             android:background="@drawable/background_title"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:text="Article"
+            android:text="@string/article"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,45 +35,54 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_title_article">
 
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chips_continentsType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:singleLine="true">
+                app:checkedChip="@+id/chips_continentsType_asia"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chips_continentsType_asia"
+                    style="@style/CustomChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Asia"
-                    app:chipBackgroundColor="@color/white"
-                    app:rippleColor="@color/green" />
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/asia" />
 
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chips_continentsType_merica"
+                    style="@style/CustomChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="America"
-                    app:chipBackgroundColor="@color/white"
-                    app:rippleColor="@color/green" />
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/america" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chips_continentsType_europe"
+                    style="@style/CustomChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Europe"
-                    app:chipBackgroundColor="@color/white"
-                    app:rippleColor="@color/green" />
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/europe" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chips_continentsType_australia"
+                    style="@style/CustomChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Australia"
-                    app:chipBackgroundColor="@color/white"
-                    app:rippleColor="@color/green" />
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/australia" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chips_continentsType_africa"
+                    style="@style/CustomChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Africa"
-                    app:chipBackgroundColor="@color/white"
-                    app:rippleColor="@color/green" />
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/africa" />
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 
@@ -84,6 +93,7 @@
             app:layout_constraintTop_toBottomOf="@+id/hsv_continents_chips_article"
             tools:layout_editor_absoluteX="0dp"
             tools:listitem="@layout/item_article" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

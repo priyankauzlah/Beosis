@@ -46,8 +46,14 @@
     <string name="interested_major">Interested Major</string>
     <string name="most_popular">Most Popular</string>
     <string name="explore_more">Explore More</string>
-    <string name="profile">Profile</string>
     <string name="calendar">Calendar</string>
-
-
+    <string name="article">Article</string>
+    <string name="asia">Asia</string>
+    <string name="america">America</string>
+    <string name="europe">Europe</string>
+    <string name="australia">Australia</string>
+    <string name="africa">Africa</string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="profile">Profile</string>
 </resources>

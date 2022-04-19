@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
 
-        supportFragmentManager.beginTransaction().replace(R.id.main_container, HomeFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.main_container, ArticleFragment()).commit()
         val bottomNav : BottomNavigationView = findViewById(R.id.bottom_navigation_view)
         bottomNav.setOnNavigationItemSelectedListener(navListener)
     }
