@@ -32,7 +32,6 @@
     <string name="text_user">Users</string>
     <string name="error_register">Register Failed</string>
     <string name="deadline_07_january_2022">Deadline : 07 January 2022</string>
-    <string name="undergraduate">Undergraduate</string>
     <string name="south_korea">South Korea</string>
     <string name="korea_advanced_institute">Korea Advanced Institute</string>
     <string name="kaist">KAIST</string>
@@ -56,4 +55,12 @@
     <string name="home">Home</string>
     <string name="save">Save</string>
     <string name="profile">Profile</string>
+    <string name="filter">Filter</string>
+    <string name="continents">Continents</string>
+    <string name="degree">Degree</string>
+    <string name="apply">Apply</string>
+    <string name="undergraduate">Undergraduate</string>
+    <string name="postgraduate">Postgraduate</string>
+    <string name="graduate">Graduate</string>
+    <string name="month_20xx">Month 20XX</string>
 </resources>

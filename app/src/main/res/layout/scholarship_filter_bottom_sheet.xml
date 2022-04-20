@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/filter"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_continents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/continents"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filter" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_filter_continents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_continents">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chips_continentsType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_continentsType_asia"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/asia"
+                app:layout_constraintEnd_toEndOf="@+id/tv_continents"
+                app:layout_constraintStart_toStartOf="@+id/tv_continents"
+                app:layout_constraintTop_toBottomOf="@+id/tv_continents" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_continentsType_america"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/america"
+                app:layout_constraintEnd_toEndOf="@+id/tv_continents"
+                app:layout_constraintStart_toStartOf="@+id/tv_continents"
+                app:layout_constraintTop_toBottomOf="@+id/chips_continentsType_asia" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_continentsType_europe"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/europe"
+                app:layout_constraintEnd_toEndOf="@+id/tv_continents"
+                app:layout_constraintStart_toStartOf="@+id/tv_continents"
+                app:layout_constraintTop_toBottomOf="@+id/chips_continentsType_america" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_continentsType_australia"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/australia"
+                app:layout_constraintEnd_toEndOf="@+id/tv_continents"
+                app:layout_constraintHorizontal_bias="0.586"
+                app:layout_constraintStart_toStartOf="@+id/tv_continents"
+                app:layout_constraintTop_toBottomOf="@+id/chips_continentsType_europe" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_continentsType_africa"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/africa"
+                app:layout_constraintEnd_toEndOf="@+id/chips_continentsType_australia"
+                app:layout_constraintStart_toStartOf="@+id/chips_continentsType_australia"
+                app:layout_constraintTop_toBottomOf="@+id/chips_continentsType_australia" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/degree"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_filter_continents" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_filter_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@+id/tv_degree"
+        app:layout_constraintStart_toStartOf="@+id/tv_degree"
+        app:layout_constraintTop_toBottomOf="@+id/tv_degree">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chips_degreeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkedChip="@+id/chips_continentsType_asia"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_degreeType_undergraduate"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/undergraduate"
+                app:layout_constraintEnd_toEndOf="@+id/tv_degree"
+                app:layout_constraintStart_toStartOf="@+id/tv_degree"
+                app:layout_constraintTop_toBottomOf="@+id/tv_degree" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_degreeType_graduate"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/graduate"
+                app:layout_constraintEnd_toEndOf="@+id/tv_degree"
+                app:layout_constraintStart_toStartOf="@+id/tv_degree"
+                app:layout_constraintTop_toBottomOf="@+id/chips_degreeType_undergraduate" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chips_degreeType_postgraduate"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/postgraduate"
+                app:layout_constraintEnd_toEndOf="@+id/tv_degree"
+                app:layout_constraintHorizontal_bias="0.513"
+                app:layout_constraintStart_toStartOf="@+id/tv_degree"
+                app:layout_constraintTop_toBottomOf="@+id/chips_degreeType_graduate" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/et_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/background_button_green"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/apply"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/hsv_filter_degree"
+        app:layout_constraintStart_toStartOf="@+id/hsv_filter_degree"
+        app:layout_constraintTop_toBottomOf="@+id/hsv_filter_degree" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
