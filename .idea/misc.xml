@@ -10,7 +10,9 @@
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_continents.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_country.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_deadline.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_detail_scholarship.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_item.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_purple.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_search.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/background_title.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/chip_background_color.xml" value="0.22592592592592592" />
@@ -21,6 +23,7 @@
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19375" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/ic_profile.xml" value="0.19375" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/ic_saved.xml" value="0.19375" />
+        <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/square_purple.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/drawable/unchecked_chip.xml" value="0.22592592592592592" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/activity_onboarding.xml" value="0.14130434782608695" />
@@ -30,6 +33,8 @@
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/activity_splash.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_article.xml" value="0.264" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_calendar.xml" value="0.264" />
+        <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_detail_article.xml" value="0.4" />
+        <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_detail_scholarship.xml" value="0.3026481715006305" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/UZL/Documents/IDN stuff/Kelas 11/Mobile Programming/Beosis4/app/src/main/res/layout/fragment_save.xml" value="0.1" />

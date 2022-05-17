@@ -10,11 +10,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.MainActivity
+import com.uzlahalya.beosis4.databinding.ActivityResetBinding
+import com.uzlahalya.beosis4.databinding.ActivitySigninBinding
 import kotlinx.android.synthetic.main.activity_signin.*
+import kotlin.math.sign
 
 class SigninActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var signinBinding: ActivitySigninBinding
 
     companion object {
         fun getService(from: Context) = Intent(from, SigninActivity::class.java).apply {
@@ -24,13 +28,14 @@ class SigninActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signin)
+        signinBinding = ActivitySigninBinding.inflate(layoutInflater)
+        setContentView(signinBinding.root)
         supportActionBar?.hide()
         firebaseAuth = FirebaseAuth.getInstance()
 
-        tv_reset_pass.setOnClickListener(this)
-        tv_signup_btn_sigin.setOnClickListener(this)
-        btn_signin.setOnClickListener(this)
+        signinBinding.tvResetPass.setOnClickListener(this)
+        signinBinding.tvSignupBtnSigin.setOnClickListener(this)
+        signinBinding.btnSignin.setOnClickListener(this)
     }
 
     override fun onClick(p0: View) {
@@ -42,21 +47,22 @@ class SigninActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun Signin() {
-        val email = et_email_signin.text.toString()
-        val password = et_password_signin.text.toString()
-        if (email.isEmpty() || password.isEmpty()){
+        val email = signinBinding.etEmailSignin.text.toString()
+        val password = signinBinding.etPasswordSignin.text.toString()
+        if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Email or Password cannot be empty", Toast.LENGTH_SHORT).show()
         }
 
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener{
-            if (it.isSuccessful){
-                Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
-                startActivity(MainActivity.getLaunchService(this))
-                return@addOnCompleteListener
-            }else{
-                Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
-            }
-        }.addOnFailureListener{
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
+                    startActivity(MainActivity.getLaunchService(this))
+                    return@addOnCompleteListener
+                } else {
+                    Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
+                }
+            }.addOnFailureListener {
             val progress = ProgressDialog(this, R.style.Theme_AppCompat_Light_Dialog)
             progress.hide()
             Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()

@@ -9,11 +9,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.uzlahalya.beosis4.R
-import kotlinx.android.synthetic.main.activity_reset.*
+import com.uzlahalya.beosis4.databinding.ActivityResetBinding
 
 class ResetActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var resetBinding: ActivityResetBinding
 
     companion object {
         fun getService(from: Context) = Intent(from, ResetActivity::class.java).apply {
@@ -23,12 +24,13 @@ class ResetActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reset)
+        resetBinding = ActivityResetBinding.inflate(layoutInflater)
+        setContentView(resetBinding.root)
         supportActionBar?.hide()
         mAuth = FirebaseAuth.getInstance()
 
-        iv_back_reset.setOnClickListener(this)
-        btn_send_email.setOnClickListener(this)
+        resetBinding.ivBackReset.setOnClickListener(this)
+        resetBinding.btnSendEmail.setOnClickListener(this)
     }
 
     override fun onClick(p0: View) {
@@ -39,7 +41,7 @@ class ResetActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun ResetPassword() {
-        val email = et_email_reset.text.toString()
+        val email = resetBinding.etEmailReset.text.toString()
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
         } else {

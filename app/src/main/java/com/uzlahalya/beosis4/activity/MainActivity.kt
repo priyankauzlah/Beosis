@@ -7,11 +7,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.databinding.ActivityMainBinding
 import com.uzlahalya.beosis4.fragment.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var currentFragment : Fragment
+    private lateinit var mainBinding: ActivityMainBinding
 
     companion object{
         fun getLaunchService (from: Context) = Intent(from, MainActivity::class.java).apply {
@@ -21,7 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mainBinding.root)
         supportActionBar?.hide()
 
         supportFragmentManager.beginTransaction().replace(R.id.main_container, ArticleFragment()).commit()

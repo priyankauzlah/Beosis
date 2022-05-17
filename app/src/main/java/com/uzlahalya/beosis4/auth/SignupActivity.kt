@@ -11,13 +11,14 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.MainActivity
-import kotlinx.android.synthetic.main.activity_signup.*
+import com.uzlahalya.beosis4.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mAuth: FirebaseAuth
     private lateinit var refUsers: DatabaseReference
     private var firebaseUserId: String = " "
+    private lateinit var signupBinding: ActivitySignupBinding
 
     companion object {
         fun getService(from: Context) = Intent(from, SignupActivity::class.java).apply {
@@ -27,53 +28,58 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
-        supportActionBar?.hide ()
+        signupBinding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(signupBinding.root)
+        supportActionBar?.hide()
         mAuth = FirebaseAuth.getInstance()
 
-        tv_signin_btn_signup.setOnClickListener(this)
-        btn_signup.setOnClickListener(this)
+        signupBinding.tvSigninBtnSignup.setOnClickListener(this)
+        signupBinding.btnSignup.setOnClickListener(this)
     }
 
     override fun onClick(p0: View) {
-        when(p0.id){
+        when (p0.id) {
             R.id.tv_signin_btn_signup -> startActivity(SigninActivity.getService(this))
-            R.id.btn_signup ->Signup()
+            R.id.btn_signup -> Signup()
         }
     }
 
     private fun Signup() {
-        val userName : String = et_name_signup.text.toString()
-        val email : String = et_email_signup.text.toString()
-        val password : String = et_password_signup.text.toString()
-        if(userName == ""){
+        val userName: String = signupBinding.etEmailSignup.text.toString()
+        val email: String = signupBinding.etEmailSignup.text.toString()
+        val password: String = signupBinding.etPasswordSignup.text.toString()
+        if (userName == "") {
             Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
-        }else if(email == ""){
+        } else if (email == "") {
             Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
-        }else if(password == ""){
+        } else if (password == "") {
             Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
-        }else{
+        } else {
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { it ->
-                if(it.isSuccessful){
+                if (it.isSuccessful) {
                     firebaseUserId = mAuth.currentUser!!.uid
-                    refUsers = FirebaseDatabase.getInstance().reference.child(getString(
-                        R.string.txt_user
-                    )).child(firebaseUserId)
-                    val userHashMap = HashMap <String, Any>()
+                    refUsers = FirebaseDatabase.getInstance().reference.child(
+                        getString(
+                            R.string.txt_user
+                        )
+                    ).child(firebaseUserId)
+                    val userHashMap = HashMap<String, Any>()
 
                     userHashMap["uid"] = firebaseUserId
                     userHashMap["userName"] = userName
                     userHashMap["email"] = email
 
                     refUsers.updateChildren(userHashMap).addOnCompleteListener {
-                        if(it.isSuccessful){
+                        if (it.isSuccessful) {
                             startActivity(Intent(MainActivity.getLaunchService(this)))
                             finish()
                         }
                     }
-                }else{
-                    Toast.makeText(this, getString(R.string.txt_error_register)+ it.exception!!
-                        .message.toString(), Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(
+                        this, getString(R.string.txt_error_register) + it.exception!!
+                            .message.toString(), Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

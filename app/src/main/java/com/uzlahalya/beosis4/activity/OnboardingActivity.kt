@@ -2,14 +2,14 @@ package com.uzlahalya.beosis4.activity
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.uzlahalya.beosis4.R
+import androidx.appcompat.app.AppCompatActivity
 import com.uzlahalya.beosis4.auth.SigninActivity
 import com.uzlahalya.beosis4.auth.SignupActivity
 import com.uzlahalya.beosis4.databinding.ActivityOnboardingBinding
 
 class OnboardingActivity : AppCompatActivity() {
+
     private lateinit var onboardingBinding: ActivityOnboardingBinding
 
     companion object {
