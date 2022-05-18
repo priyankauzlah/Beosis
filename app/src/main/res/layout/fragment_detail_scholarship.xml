@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DetailScholarshipFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_image_detail"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="@string/image_view"
+                android:src="@drawable/dummy_scholar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ib_arrow_back_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25dp"
+                android:layout_marginTop="@dimen/_25dp"
+                android:background="@drawable/background_purple"
+                android:contentDescription="@string/image_button"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/ib_saved_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25dp"
+                android:layout_marginEnd="@dimen/_25dp"
+                android:background="@drawable/background_purple"
+                android:contentDescription="@string/image_button"
+                android:src="@drawable/ic_saved"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/iv_background_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:contentDescription="@string/image_view"
+                android:src="@drawable/background_detail_scholarship"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_scholarship_detail"
+                android:layout_width="@dimen/_360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:maxLines="2"
+                android:text="@string/kaist"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_background_detail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_background_detail" />
+
+            <TextView
+                android:id="@+id/tv_uni_detail"
+                android:layout_width="@dimen/_360dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/korea_advanced_institute_of_science_and_technology"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title_scholarship_detail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_scholarship_detail"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_scholarship_detail" />
+
+            <TextView
+                android:id="@+id/tv_country_detail"
+                android:layout_width="@dimen/_360dp"
+                android:layout_height="28dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/south_korea"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_uni_detail"
+                app:layout_constraintStart_toStartOf="@+id/tv_uni_detail"
+                app:layout_constraintTop_toBottomOf="@+id/tv_uni_detail" />
+
+            <RelativeLayout
+                android:id="@+id/tv_major_detail"
+                android:layout_width="@dimen/_360dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline_purple"
+                app:layout_constraintEnd_toEndOf="@+id/tv_country_detail"
+                app:layout_constraintStart_toStartOf="@+id/tv_country_detail"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_detail">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="start|center_horizontal"
+                    android:text="@string/subjects_dummy"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/background_orange"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/undergraduate"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_major_detail"
+                app:layout_constraintTop_toBottomOf="@+id/tv_major_detail" />
+
+            <TextView
+                android:id="@+id/tv_openregistration_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/background_open_registration"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingTop="@dimen/_5dp"
+                android:paddingEnd="@dimen/_10dp"
+                android:paddingBottom="@dimen/_5dp"
+                android:text="@string/open_registration_08_november_2021"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_background_detail" />
+
+            <TextView
+                android:id="@+id/tv_deadline_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/background_deadline"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingTop="@dimen/_5dp"
+                android:paddingEnd="@dimen/_10dp"
+                android:paddingBottom="@dimen/_5dp"
+                android:text="@string/deadline_07_january_2022"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_openregistration_detail" />
+
+            <TextView
+                android:id="@+id/tv_benefit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/benefit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_deadline_detail" />
+
+            <TextView
+                android:id="@+id/tv_benefit_detail"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/benefit_text"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_benefit"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/tv_benefit"
+                app:layout_constraintTop_toBottomOf="@+id/tv_benefit" />
+
+            <TextView
+                android:id="@+id/tv_requirements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/requirements"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_benefit_detail" />
+
+            <TextView
+                android:id="@+id/tv_requirements_detail"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/requirements_text"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_benefit_detail"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_requirements"
+                app:layout_constraintTop_toBottomOf="@id/tv_requirements" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50dp"
+                android:background="@drawable/background_button_green"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/more_information"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_requirements_detail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>

@@ -10,4 +10,6 @@
     <dimen name="_36sp">36sp</dimen>
     <dimen name="_20sp">20sp</dimen>
     <dimen name="_24sp">24sp</dimen>
+    <dimen name="_321dp">321dp</dimen>
+    <dimen name="_360dp">360dp</dimen>
 </resources>

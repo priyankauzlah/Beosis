@@ -64,4 +64,14 @@
     <string name="graduate">Graduate</string>
     <string name="month_20xx">Month 20XX</string>
     <string name="korea_advanced_institute_of_science_and_technology">Korea Advanced Institute of Science and Technology</string>
+    <string name="subjects_dummy">Natural Science, Life Sciences and Technology, Engineering, ICT, Business</string>
+    <string name="open_registration_08_november_2021">Open registration : 08 November 2021</string>
+    <string name="benefit">Benefit</string>
+    <string name="benefit_text">- return air travel <br /> - a one off establishment allowance on arrival <br /> - full tuition fees <br /> - contribution to living expenses <br /> - introductory academic program <br />
+    - overseas student health cover <br /> - fieldwork allowance for research students and masters <br /> - by coursework which has a compulsory fieldwork</string>
+    <string name="requirements_text">- Newly arrived international students, aged 30 and less during the course of the selection year. <br /> - Students of foreign nationality living on the French soil for less than a year, previously or currently enrolled in a training course or internship that does not lead to certification. <br /> - Students of foreign nationality living on the French soil for less than a year, taking language classes (type FFL). <br /> - Students who have lived in France in the past, within the framework of a mobility programme during their studies (e.g. Erasmus Mundus Joint Master’s Degrees, exchange programme…) that did not lead to certification.</string>
+    <string name="requirements">Requirements</string>
+    <string name="more_information">More Information</string>
+    <string name="image_button">Image Button</string>
+
 </resources>
