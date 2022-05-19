@@ -12,4 +12,6 @@
     <dimen name="_24sp">24sp</dimen>
     <dimen name="_321dp">321dp</dimen>
     <dimen name="_360dp">360dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
 </resources>
