@@ -1,11 +1,12 @@
 package com.uzlahalya.beosis4.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.databinding.FragmentArticleBinding
 
 class ArticleFragment : Fragment() {
 

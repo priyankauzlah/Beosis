@@ -80,8 +80,9 @@
                         android:layout_toEndOf="@+id/iv_image_popular_1"
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_bold"
+                        android:maxWidth="@dimen/_230dp"
                         android:maxLines="1"
-                        android:text="@string/kaist"
+                        android:text="ASEAN Undergraduate Scholarship (AUS)"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -95,8 +96,9 @@
                         android:layout_toEndOf="@+id/iv_image_popular_1"
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_light"
+                        android:maxWidth="@dimen/_230dp"
                         android:maxLines="1"
-                        android:text="@string/korea_advanced_institute"
+                        android:text="NUS (National University of Singapore)"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
 
@@ -111,7 +113,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_light"
                         android:maxLines="1"
-                        android:text="@string/south_korea"
+                        android:text="Singapore"
                         android:textColor="#858585"
                         android:textSize="13sp" />
 
@@ -140,7 +142,7 @@
                         android:background="@drawable/background_deadline"
                         android:fontFamily="@font/poppins_light"
                         android:gravity="center"
-                        android:text="@string/deadline_07_january_2022"
+                        android:text="Deadline : 14 Februari 2022"
                         android:textColor="@color/black"
                         android:textSize="9sp" />
                 </RelativeLayout>
@@ -177,8 +179,9 @@
                         android:layout_toEndOf="@+id/iv_image_popular_2"
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_bold"
+                        android:maxWidth="@dimen/_230dp"
                         android:maxLines="1"
-                        android:text="@string/kaist"
+                        android:text="KAIST (Korea Advanced Institute of Science and Technology)"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -191,6 +194,7 @@
                         android:layout_marginEnd="@dimen/_10dp"
                         android:layout_toEndOf="@+id/iv_image_popular_2"
                         android:ellipsize="end"
+                        android:maxWidth="@dimen/_230dp"
                         android:fontFamily="@font/poppins_light"
                         android:maxLines="1"
                         android:text="@string/korea_advanced_institute"
@@ -206,6 +210,7 @@
                         android:layout_marginEnd="@dimen/_10dp"
                         android:layout_toEndOf="@+id/iv_image_popular_2"
                         android:ellipsize="end"
+                        android:maxWidth="@dimen/_230dp"
                         android:fontFamily="@font/poppins_light"
                         android:maxLines="1"
                         android:text="@string/south_korea"
@@ -275,7 +280,8 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_bold"
                         android:maxLines="1"
-                        android:text="@string/kaist"
+                        android:text="The Lester B. Pearson International Student Scholarships"
+                        android:maxWidth="@dimen/_230dp"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -290,7 +296,8 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_light"
                         android:maxLines="1"
-                        android:text="@string/korea_advanced_institute"
+                        android:maxWidth="@dimen/_230dp"
+                        android:text="University of Toronto "
                         android:textColor="@color/black"
                         android:textSize="13sp" />
 
@@ -304,8 +311,9 @@
                         android:layout_toEndOf="@+id/iv_image_popular_3"
                         android:ellipsize="end"
                         android:fontFamily="@font/poppins_light"
+                        android:maxWidth="@dimen/_230dp"
                         android:maxLines="1"
-                        android:text="@string/south_korea"
+                        android:text="Canada"
                         android:textColor="#858585"
                         android:textSize="13sp" />
 
@@ -334,7 +342,7 @@
                         android:background="@drawable/background_deadline"
                         android:fontFamily="@font/poppins_light"
                         android:gravity="center"
-                        android:text="@string/deadline_07_january_2022"
+                        android:text="Deadline : 16 January 2023 "
                         android:textColor="@color/black"
                         android:textSize="9sp" />
                 </RelativeLayout>
