@@ -10,6 +10,8 @@ import com.uzlahalya.beosis4.databinding.FragmentArticleBinding
 
 class ArticleFragment : Fragment() {
 
+    private lateinit var articleBinding: FragmentArticleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
