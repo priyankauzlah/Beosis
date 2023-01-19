@@ -1,40 +1,34 @@
 package com.uzlahalya.beosis4.activity
 
-import android.app.PendingIntent.getService
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
+import androidx.constraintlayout.motion.widget.MotionLayout
 import com.uzlahalya.beosis4.R
-import com.uzlahalya.beosis4.activity.SplashActivity.Companion.getService
-import com.uzlahalya.beosis4.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
-    private lateinit var splashBinding: ActivitySplashBinding
-
-    companion object {
-        fun getService(from: Context) = Intent(from, SplashActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        splashBinding = ActivitySplashBinding.inflate(layoutInflater)
-        setContentView(splashBinding.root)
-    }
+        setContentView(R.layout.activity_splash)
 
-    override fun onResume() {
-        object : CountDownTimer(3600, 200) {
-            override fun onTick(p0: Long) {
+        val motionLayout = findViewById<MotionLayout>(R.id.motion_layout)
+        motionLayout.addTransitionListener(object : MotionLayout.TransitionListener {
+            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+
             }
 
-            override fun onFinish() {
-                startActivity(OnboardingActivity.getService(this@SplashActivity))
+            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
             }
-        }.start()
-        super.onResume()
+
+            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
+            }
+
+            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+            }
+
+        })
     }
 }
