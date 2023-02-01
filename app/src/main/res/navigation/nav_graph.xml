@@ -6,20 +6,20 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/articleFragment"
-        android:name="com.uzlahalya.beosis4.fragment.ArticleFragment"
-        android:label="fragment_article"
-        tools:layout="@layout/fragment_article" />
+        android:id="@+id/homeFragment"
+        android:name="com.uzlahalya.beosis4.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.uzlahalya.beosis4.fragment.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.uzlahalya.beosis4.fragment.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/articleFragment"
+        android:name="com.uzlahalya.beosis4.fragment.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" />
     <fragment
         android:id="@+id/saveFragment"
         android:name="com.uzlahalya.beosis4.fragment.SaveFragment"

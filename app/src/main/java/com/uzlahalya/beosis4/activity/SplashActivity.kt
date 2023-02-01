@@ -1,8 +1,8 @@
 package com.uzlahalya.beosis4.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.uzlahalya.beosis4.R
 
