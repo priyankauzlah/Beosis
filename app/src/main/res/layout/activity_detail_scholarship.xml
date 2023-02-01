@@ -245,6 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_50dp"
+                android:layout_marginBottom="@dimen/_50dp"
                 android:background="@drawable/background_button_green"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/more_information"
@@ -252,8 +253,10 @@
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_requirements_detailscholarship" />
+                app:layout_constraintTop_toBottomOf="@id/tv_requirements_detailscholarship"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
