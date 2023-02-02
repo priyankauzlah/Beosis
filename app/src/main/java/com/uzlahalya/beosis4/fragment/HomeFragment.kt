@@ -82,8 +82,8 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         mitsui.country = "Japan"
         mitsui.degree = "Undergraduate"
         mitsui.majors = "Study of Sciences and Engineering & Study of Social Sciences, Business and Commerce\n"
-        mitsui.openregistration = "17 Jan 2023"
-        mitsui.closeregistration = "18 feb 2023"
+        mitsui.openregistration = "2023-01-17"
+        mitsui.closeregistration = "2023-02-18"
 
         //5
         val asean = Scholarship()

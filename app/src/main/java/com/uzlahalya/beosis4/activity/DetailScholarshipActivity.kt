@@ -24,7 +24,7 @@ class DetailScholarshipActivity : AppCompatActivity() {
         detailScholarshipBinding.tvCountryDetailscholarship.text = getIntent().getStringExtra("SCHOLARSHIPCOUNTRY")
         detailScholarshipBinding.tvMajorDetailscholarship.text = getIntent().getStringExtra("SCHOLARSHIPMAJOR")
         detailScholarshipBinding.tvDegreeDetailScholarship.text = getIntent().getStringExtra("SCHOLARSHIPDEGREE")
-        detailScholarshipBinding.tvOpenregistrationDetailscholarship.text = getIntent().getStringExtra("SCHOLARSHIPOPENREGISTRATION")
+        detailScholarshipBinding.tvDateOpenregistrationDetailscholarship.text = getIntent().getStringExtra("SCHOLARSHIPOPENREGISTRATION")
         detailScholarshipBinding.tvDeadlineDetailscholarship.text = getIntent().getStringExtra("SCHOLARSHIPCLOSEREGRISTRATION")
 
     }
