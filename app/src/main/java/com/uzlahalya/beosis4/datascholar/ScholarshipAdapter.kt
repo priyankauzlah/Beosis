@@ -21,8 +21,8 @@ class ScholarshipAdapter (var data : ArrayList<Scholarship>, var context: Activi
         val scholarshipUniversity = view.findViewById<TextView>(R.id.tv_uni_item_scholar)
         val scholarshipCountry = view.findViewById<TextView>(R.id.tv_country_item_scholar)
         val scholarshipDegree = view.findViewById<TextView>(R.id.tv_level_item_scholar)
-        val scholarshipOpenRegistration = view.findViewById<TextView>(R.id.tv_openregistration_detailscholarship)
-        val scholarshipCloseregistration = view.findViewById<TextView>(R.id.tv_dealine_item_scholar)
+//        val scholarshipOpenRegistration = view.findViewById<TextView>(R.id.tv_openregistration_detailscholarship)
+        val scholarshipCloseregistration = view.findViewById<TextView>(R.id.tv_date_deadline_detailscholarship)
 
 
         fun initialize(item: Scholarship,  action: onScholarshipItemClickListener){

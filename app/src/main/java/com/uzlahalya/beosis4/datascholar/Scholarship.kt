@@ -12,5 +12,6 @@ data class Scholarship (
     var majors : String? = null,
     var degree : String? = null,
     var closeregistration : String? = null,
+    var link : String? = null,
     var openregistration : String? = null,
 ) : Parcelable

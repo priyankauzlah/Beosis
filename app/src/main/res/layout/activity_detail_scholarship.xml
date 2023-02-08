@@ -165,7 +165,7 @@
                 android:layout_height="29dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:background="@drawable/background_open_registration"
-                app:layout_constraintBottom_toTopOf="@id/tv_deadline_detailscholarship"
+                app:layout_constraintBottom_toTopOf="@id/rv_deadline_detailscholarship"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_background_detail">
@@ -180,7 +180,8 @@
                     android:layout_marginStart="5dp"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
-                    android:text="Open Registration :"
+                    android:text="@string/open_registration"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
                 <TextView
@@ -192,29 +193,52 @@
                     android:layout_marginStart="@dimen/_10dp"
                     android:layout_toEndOf="@+id/tv_openregistration_detailscholarship"
                     android:fontFamily="@font/poppins_light"
-                    android:foregroundGravity="center"
-                    android:text="2023_07-07"
+                    android:gravity="center"
+                    android:text="2023-07-07"
+                    android:textColor="@color/black"
                     android:textSize="15sp" />
 
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tv_deadline_detailscholarship"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RelativeLayout
+                android:id="@+id/rv_deadline_detailscholarship"
+                android:layout_width="250dp"
+                android:layout_height="29dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:background="@drawable/background_deadline"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:paddingStart="@dimen/_10dp"
-                android:paddingTop="@dimen/_5dp"
-                android:paddingEnd="@dimen/_10dp"
-                android:paddingBottom="@dimen/_5dp"
-                android:text="@string/deadline_07_january_2022"
-                android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rv_openregistration_detailscholarship" />
+                app:layout_constraintTop_toBottomOf="@+id/rv_openregistration_detailscholarship">
+
+                <TextView
+                    android:id="@+id/tv_deadline_detailscholarship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:text="@string/close_registration"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_date_deadline_detailscholarship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_deadline_detailscholarship"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_toEndOf="@+id/tv_deadline_detailscholarship"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:text="2023-07-07"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/tv_benefit"
@@ -227,7 +251,7 @@
                 android:textSize="@dimen/_24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_deadline_detailscholarship" />
+                app:layout_constraintTop_toBottomOf="@+id/rv_deadline_detailscholarship" />
 
             <TextView
                 android:id="@+id/tv_benefit_detailscholarship"
@@ -268,10 +292,36 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_requirements"
                 app:layout_constraintTop_toBottomOf="@id/tv_requirements" />
 
-            <Button
+            <TextView
+                android:id="@+id/tv_more_information_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_50dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="More Information Link"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_requirements_detailscholarship"
+                app:layout_constraintStart_toStartOf="@+id/tv_requirements_detailscholarship"
+                app:layout_constraintTop_toBottomOf="@id/tv_requirements_detailscholarship" />
+
+            <TextView
+                android:id="@+id/tv_link"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/link_scholarship"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_more_information_link"
+                app:layout_constraintStart_toStartOf="@+id/tv_more_information_link"
+                app:layout_constraintTop_toBottomOf="@id/tv_more_information_link" />
+
+            <Button
+                android:id="@+id/btn_more_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
                 android:layout_marginBottom="@dimen/_50dp"
                 android:background="@drawable/background_button_green"
                 android:fontFamily="@font/poppins_medium"

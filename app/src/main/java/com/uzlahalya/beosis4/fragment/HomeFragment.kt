@@ -1,6 +1,7 @@
 package com.uzlahalya.beosis4.fragment
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -50,7 +51,8 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         china_aun.country = "China"
         china_aun.majors = "Philosophy, Economics, Legal Studies, Education, Literature, History, and Management, Science, Engineering, and Agriculture, and Medicine."
         china_aun.openregistration = "-"
-        china_aun.closeregistration = "31 Jan 2023"
+        china_aun.link = "https://www.aunsec.org/application/files/6816/4016/9731/China-AUN_Scholarship_2022_Application_Guidelines.pdf"
+        china_aun.closeregistration = "2023-01-31"
 
         //2
         val mext = Scholarship()
@@ -60,8 +62,9 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         mext.degree = "Undergraduate"
         mext.country = "Japan"
         mext.majors = "Japanese, mathematics, English, and social sciences (for those who choose the field of social studies), and physics, chemistry, biology (for those who choose the field of science)"
+        mext.link = "https://www.aunsec.org/application/files/6816/4016/9731/China-AUN_Scholarship_2022_Application_Guidelines.pdf"
         mext.openregistration = "20 Dec 2023"
-        mext.closeregistration = "13 Jan 2024"
+        mext.closeregistration = "2024-01-31"
 
         //3
         val sophia = Scholarship()
@@ -71,6 +74,7 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         sophia.degree = "Undergraduate & Graduate"
         sophia.country = "Sophia University"
         sophia.majors = "Engineering, Humanities and Social Sciences, Finance and Economics, Business."
+        sophia.link = "https://www.aunsec.org/application/files/6816/4016/9731/China-AUN_Scholarship_2022_Application_Guidelines.pdf"
         sophia.openregistration = "17 Nov 2023"
         sophia.closeregistration = "13 Apr 2024"
 
@@ -82,6 +86,7 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         mitsui.country = "Japan"
         mitsui.degree = "Undergraduate"
         mitsui.majors = "Study of Sciences and Engineering & Study of Social Sciences, Business and Commerce\n"
+        mitsui.link = "https://www.aunsec.org/application/files/6816/4016/9731/China-AUN_Scholarship_2022_Application_Guidelines.pdf"
         mitsui.openregistration = "2023-01-17"
         mitsui.closeregistration = "2023-02-18"
 
@@ -92,6 +97,7 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         asean.university = "National University Singapore"
         asean.country = "Singapore"
         asean.degree = "Undergraduate"
+        asean.link = "https://www.aunsec.org/application/files/6816/4016/9731/China-AUN_Scholarship_2022_Application_Guidelines.pdf"
         asean.majors = "all majors excluding Dentistry, Law, Medicine, and Music"
         asean.openregistration = "15 Oct 2023"
         asean.closeregistration = "14 Feb 2024"
@@ -118,8 +124,18 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         intent.putExtra("SCHOLARSHIPCOUNTRY", item.country)
         intent.putExtra("SCHOLARSHIPMAJOR", item.majors)
         intent.putExtra("SCHOLARSHIPDEGREE", item.degree)
+        intent.putExtra("SCHOLARSHIPLINK", item.link)
         intent.putExtra("SCHOLARSHIPOPENREGISTRATION", item.openregistration)
         intent.putExtra("SCHOLARSHIPCLOSEREGRISTRATION", item.closeregistration)
+
+//        val url = "http://www.example.com"
+//        val i = Intent(Intent.ACTION_VIEW)
+//        i.data = Uri.parse(url)
+//        startActivity(i)
+//
+//        val i = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.com"))
+//        startActivity(i)
+
         startActivity(intent)
     }
 
