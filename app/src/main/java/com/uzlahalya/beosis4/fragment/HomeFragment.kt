@@ -1,7 +1,6 @@
 package com.uzlahalya.beosis4.fragment
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,7 +12,6 @@ import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.DetailScholarshipActivity
 import com.uzlahalya.beosis4.datascholar.ScholarshipAdapter
 import com.uzlahalya.beosis4.datascholar.Scholarship
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListener  {
 
@@ -128,72 +126,7 @@ class HomeFragment : Fragment(), ScholarshipAdapter.onScholarshipItemClickListen
         intent.putExtra("SCHOLARSHIPOPENREGISTRATION", item.openregistration)
         intent.putExtra("SCHOLARSHIPCLOSEREGRISTRATION", item.closeregistration)
 
-//        val url = "http://www.example.com"
-//        val i = Intent(Intent.ACTION_VIEW)
-//        i.data = Uri.parse(url)
-//        startActivity(i)
-//
-//        val i = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.com"))
-//        startActivity(i)
-
         startActivity(intent)
     }
 
 }
-
-//    private val list = ArrayList<Scholarship>()
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        rv_explore_more.setHasFixedSize(true)
-//        list.addAll(getScholarship())
-//        showRecycler()
-//    }
-//
-//    private fun showRecycler() {
-//        rv_explore_more.layoutManager = LinearLayoutManager(context)
-//        val listScholarship = ScholarshipAdapter(list)
-//        rv_explore_more.adapter = listScholarship
-//        listScholarship.setOnItemClickCallBack(object : ScholarshipAdapter.OnItemClickCallBack {
-//            override fun onItemClicked(data: Scholarship) {
-////                showToast(data)
-//            }
-//        })
-//    }
-//
-//    private fun getScholarship(): ArrayList<Scholarship>{
-//        val dataLogo = resources.getStringArray(R.array.logo_scholarship)
-//        val dataName = resources.getStringArray(R.array.name_scholarship)
-//        val dataUniversity = resources.getStringArray(R.array.university_scholarship)
-//        val dataCountry = resources.getStringArray(R.array.country_scholarship)
-//        val dataMajors = resources.getStringArray(R.array.majors_scholarship)
-//        val dataDegree = resources.getStringArray(R.array.degree_scholarship)
-//        val dataOpenReg = resources.getStringArray(R.array.openregistration_scholarship)
-//        val dataCloseReg = resources.getStringArray(R.array.closeregistration_scholarship)
-//
-//        val listScholarship = ArrayList<Scholarship>()
-//
-//        for (position in dataLogo.indices){
-//            val scholarship = Scholarship(
-//                dataLogo [position],
-//                dataName [position],
-//                dataUniversity [position],
-//                dataCountry [position],
-//                dataMajors [position],
-//                dataDegree [position],
-//                dataCloseReg [position],
-//                dataOpenReg [position]
-//            )
-//            listScholarship.add(scholarship)
-//        }
-//        return listScholarship
-//    }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_home, container, false)
-//    }

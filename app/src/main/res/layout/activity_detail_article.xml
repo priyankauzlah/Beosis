@@ -18,7 +18,7 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/ib_arrow_back_detailscholarship"
+                android:id="@+id/ib_arrow_back_detailarticle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_25dp"
@@ -58,7 +58,7 @@
                 android:textSize="27sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ib_arrow_back_detailscholarship" />
+                app:layout_constraintTop_toBottomOf="@+id/ib_arrow_back_detailarticle" />
 
             <TextView
                 android:id="@+id/tv_content_detailarticle"
