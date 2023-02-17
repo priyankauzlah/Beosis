@@ -41,13 +41,13 @@
                 android:gravity="center"
                 android:text="@string/malaysia"
                 android:textColor="@color/white"
-                android:textSize="11sp"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_title_detailarticle"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_25dp"
                 android:layout_marginTop="@dimen/_10dp"
@@ -62,7 +62,7 @@
 
             <TextView
                 android:id="@+id/tv_content_detailarticle"
-                android:layout_width="366dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10dp"
                 android:justificationMode="inter_word"

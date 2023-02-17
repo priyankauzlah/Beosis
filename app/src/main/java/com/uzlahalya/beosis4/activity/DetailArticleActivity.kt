@@ -3,9 +3,8 @@ package com.uzlahalya.beosis4.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.databinding.ActivityDetailArticleBinding
-import com.uzlahalya.beosis4.databinding.ActivityDetailScholarshipBinding
+import com.uzlahalya.beosis4.fragment.ArticleFragment
 import kotlinx.android.synthetic.main.activity_detail_article.*
 import kotlinx.android.synthetic.main.activity_detail_scholarship.*
 
@@ -19,15 +18,15 @@ class DetailArticleActivity : AppCompatActivity() {
         setContentView(detailArticleBinding.root)
 
         supportActionBar?.hide()
-        ib_arrow_back_detailarticle.setOnClickListener {
-            startActivity(
-                Intent(
-                    MainActivity.getLaunchService(
-                        this
-                    )
-                )
-            )
-        }
+//        ib_arrow_back_detailarticle.setOnClickListener {
+//            startActivity(
+//                Intent(
+//                    ArticleFragment.getLaunchService(
+//                        this
+//                    )
+//                )
+//            )
+//        }
 
 
         detailArticleBinding.tvTitleDetailarticle.text =
@@ -37,6 +36,14 @@ class DetailArticleActivity : AppCompatActivity() {
         detailArticleBinding.tvContentDetailarticle.text =
             getIntent().getStringExtra("ARTICLECONTENT")
 
+        back()
+
+    }
+
+    private fun back() {
+        detailArticleBinding.ibArrowBackDetailarticle.setOnClickListener{
+            startActivity(ArticleFragment.getLaunchService(this))
+        }
     }
 
 }

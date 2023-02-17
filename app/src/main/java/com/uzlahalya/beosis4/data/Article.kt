@@ -1,4 +1,4 @@
-package com.uzlahalya.beosis4.datascholar
+package com.uzlahalya.beosis4.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

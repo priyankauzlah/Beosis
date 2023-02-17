@@ -1,5 +1,6 @@
 package com.uzlahalya.beosis4.fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,13 +12,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.DetailArticleActivity
 import com.uzlahalya.beosis4.databinding.FragmentArticleBinding
-import com.uzlahalya.beosis4.datascholar.Article
-import com.uzlahalya.beosis4.datascholar.ArticleAdapter
+import com.uzlahalya.beosis4.data.Article
+import com.uzlahalya.beosis4.data.ArticleAdapter
 
 class ArticleFragment : Fragment(), ArticleAdapter.onArticleItemClickListener {
 
     private var articleBinding: FragmentArticleBinding? = null
     lateinit var rvArticle : RecyclerView
+
+    companion object{
+        fun getLaunchService (from: Context) = Intent(from, ArticleFragment::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,7 +50,7 @@ class ArticleFragment : Fragment(), ArticleAdapter.onArticleItemClickListener {
 
         //1
         val studyinmalaysia = Article()
-        studyinmalaysia.image = R.drawable.china_aun
+        studyinmalaysia.image = R.drawable.study_in_malaysia
         studyinmalaysia.title = "Study in Malaysia"
         studyinmalaysia.country = "Malaysia"
         studyinmalaysia.content = "Why Study in Malaysia?\n" +
@@ -52,7 +59,7 @@ class ArticleFragment : Fragment(), ArticleAdapter.onArticleItemClickListener {
 
         //2
         val studyinjapan = Article()
-        studyinjapan.image = R.drawable.china_aun
+        studyinjapan.image = R.drawable.study_in_malaysia
         studyinjapan.title = "Study in Japan"
         studyinjapan.country = "Japan"
         studyinjapan.content = "When referring to facts about Japanese culture, multiple things come across our minds. From the cherry blossom trees opening the Sakura season every spring, the colourful classic kimono dresses, the alternative Harajuku Style and Japanese cosplay, to the famous national sport of Sumo wrestling, Karate, Judo, Jiu-Jitsu or calligraphy and origami, the list in unending! \n" +
@@ -60,14 +67,14 @@ class ArticleFragment : Fragment(), ArticleAdapter.onArticleItemClickListener {
 
         //3
         val studyinindonesia = Article()
-        studyinindonesia.image = R.drawable.china_aun
+        studyinindonesia.image = R.drawable.study_in_malaysia
         studyinindonesia.title = "Studying Abroad in Indonesia for International Students"
         studyinindonesia.country = "Indonesia"
         studyinindonesia.content = "As Indonesia becomes an increasingly important pillar in the global economy given its promising economic outlook, setting it on course to be the world’s 7th largest economy by 2030 and its position as by far the largest economy in ASEAN, it is naturally attracting the interest of international students. To date, Indonesia has less than 6,000 international students studying in local universities which is a paltry figure compared to Malaysia with 63,000 and Singapore with 52,000 (UNESCO, 2014). There are a number of factors at play accounting for the low number of international students studying in Indonesian universities including the quality of Indonesian educational institutions, the lack of student exchange programmes, student visa issues as well as the lack of promotion of the country to international students."
 
         //4
         val studyintaiwan = Article()
-        studyintaiwan.image = R.drawable.china_aun
+        studyintaiwan.image = R.drawable.study_in_malaysia
         studyintaiwan.title = "Students Prespective"
         studyintaiwan.country = "Taiwan"
         studyintaiwan.content = "My name is fanny. I am an overseas Chinese student from Indonesia. I love studying while traveling. Thus, I have traveled to many different countries in my life.\n" +
@@ -78,7 +85,7 @@ class ArticleFragment : Fragment(), ArticleAdapter.onArticleItemClickListener {
 
         //5
         val studyincanada = Article()
-        studyincanada.image = R.drawable.china_aun
+        studyincanada.image = R.drawable.study_in_malaysia
         studyincanada.title = "Study in Canada Overview"
         studyincanada.country = "Canada"
         studyincanada.content = "Canada has become a booming hub for international students whose dreams include remaining in the country in which they complete their studies. No longer an overlooked global destination to earn a degree, Canada also offers a direct path to permanent citizenship - an option many international students seek. Canada has ranked as one of the top ten places to live in the world for over twenty years, and boasts an education system ranked among the best.\n" +

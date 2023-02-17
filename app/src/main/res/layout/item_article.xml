@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
-    android:layout_marginTop="10dp"
     android:layout_marginRight="20dp"
-    android:layout_marginBottom="@dimen/_10dp"
+    android:layout_marginBottom="@dimen/_5dp"
     android:background="@drawable/background_article">
 
     <RelativeLayout
@@ -45,11 +44,11 @@
         <TextView
             android:id="@+id/tv_country_name_article"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_title_item_article"
+            android:layout_height="@dimen/_20dp"
             android:layout_alignStart="@+id/tv_title_item_article"
+            android:layout_alignBottom="@+id/iv_image_item_article"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="54dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/background_country"
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
