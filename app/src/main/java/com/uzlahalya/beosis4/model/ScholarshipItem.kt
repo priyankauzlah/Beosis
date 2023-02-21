@@ -6,6 +6,15 @@ import kotlinx.android.parcel.Parcelize
 import kotlinx.android.parcel.RawValue
 
 @Parcelize
+data class ResponseScholarship(
+
+    @field: SerializedName("results")
+    val results: List<ScholarshipItem?>? = null,
+
+): Parcelable
+
+
+@Parcelize
 data class ScholarshipItem(
 
     @field:SerializedName("continent")

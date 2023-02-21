@@ -9,4 +9,5 @@ data class Article (
     var title : String? = null,
     var country : String? = null,
     var content : String? = null,
+    var url : String? = null,
 ):Parcelable

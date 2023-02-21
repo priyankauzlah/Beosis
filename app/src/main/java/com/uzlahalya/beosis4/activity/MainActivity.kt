@@ -4,11 +4,19 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.data.ScholarshipAdapterr
 import com.uzlahalya.beosis4.databinding.ActivityMainBinding
 import com.uzlahalya.beosis4.fragment.*
+import com.uzlahalya.beosis4.model.ScholarshipItem
+import com.uzlahalya.beosis4.model.ScholarshipResponse
+import com.uzlahalya.beosis4.utils.ApiService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +34,26 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         supportActionBar?.hide()
+
+        ApiService.getService().getData().enqueue(object : Callback<ScholarshipItem> {
+            override fun onResponse(
+                call: Call<ScholarshipItem>,
+                response: Response<ScholarshipItem>
+            ) {
+                Log.d("RESPONSE", response.isSuccessful.toString())
+                if (response.isSuccessful){
+                    val scholarshipItem = response.body()
+                    val dataScholarship = scholarshipItem
+                    val scholarshipAdapterr = ScholarshipAdapterr()
+
+                }
+            }
+
+            override fun onFailure(call: Call<ScholarshipItem>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+        })
 
         supportFragmentManager.beginTransaction().replace(R.id.main_container, HomeFragment()).commit()
         val bottomNav : BottomNavigationView = findViewById(R.id.bottom_navigation_view)
