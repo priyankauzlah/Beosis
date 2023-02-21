@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.activity.DetailArticleActivity
 import com.uzlahalya.beosis4.model.ScholarshipItem
 import kotlinx.android.synthetic.main.item_scholarship.view.*
 

@@ -13,6 +13,8 @@ import android.util.Patterns
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.uzlahalya.beosis4.databinding.ActivityDetailScholarshipBinding
+import com.uzlahalya.beosis4.fragment.ArticleFragment
+import com.uzlahalya.beosis4.fragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_detail_scholarship.*
 
 class DetailScholarshipActivity : AppCompatActivity() {
@@ -29,15 +31,15 @@ class DetailScholarshipActivity : AppCompatActivity() {
         setContentView(detailScholarshipBinding.root)
 
         supportActionBar?.hide()
-        ib_arrow_back_detailscholarship.setOnClickListener {
-            startActivity(
-                Intent(
-                    MainActivity.getLaunchService(
-                        this
-                    )
-                )
-            )
-        }
+//        ib_arrow_back_detailscholarship.setOnClickListener {
+//            startActivity(
+//                Intent(
+////                    ArticleFragment.getLauchService(
+//                        this
+//                    )
+//                )
+//            )
+//        }
 
         getIntent().getStringExtra("SCHOLARSHIPLOGO")
             ?.let { detailScholarshipBinding.ivImageDetailscholarship.setImageResource(it.toInt()) }
@@ -57,6 +59,10 @@ class DetailScholarshipActivity : AppCompatActivity() {
             getIntent().getStringExtra("SCHOLARSHIPCLOSEREGRISTRATION")
         detailScholarshipBinding.tvLink.text =
             getIntent().getStringExtra("SCHOLARSHIPLINK")
+        detailScholarshipBinding.tvBenefitDetailscholarship.text =
+            getIntent().getStringExtra("SCHOLARSHIPBENEFIT")
+        detailScholarshipBinding.tvRequirementsDetailscholarship.text =
+            getIntent().getStringExtra("SCHOLARSHIPREQUIREMENTS")
 
         clickablelink(longTextWithLinks)
     }
