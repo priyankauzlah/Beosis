@@ -1,24 +1,18 @@
 package com.uzlahalya.beosis4.data
 
-import android.app.Activity
-import android.content.ClipData
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.DetailScholarshipActivity
 import com.uzlahalya.beosis4.databinding.ItemScholarshipBinding
 import com.uzlahalya.beosis4.model.ScholarshipItem
 
 class ScholarshipAdapterr(
-    var data: ArrayList<Scholarship>,
-    var context: Activity?,
-    var clickListener: onScholarshipItemClickListener
+    var context: Context,
 ) : RecyclerView.Adapter<ScholarshipAdapterr.MyViewHolder>() {
 
     private var dataScholarship : List<ScholarshipItem> = listOf()
@@ -55,10 +49,11 @@ class ScholarshipAdapterr(
     }
 
     override fun getItemCount(): Int {
-        return data.size
+        return dataScholarship.size
     }
 
-    interface onScholarshipItemClickListener {
-        fun onItemClick(item: Scholarship, position: Int)
+    fun setData(data: List<ScholarshipItem>){
+        dataScholarship = data
+        notifyDataSetChanged()
     }
 }
