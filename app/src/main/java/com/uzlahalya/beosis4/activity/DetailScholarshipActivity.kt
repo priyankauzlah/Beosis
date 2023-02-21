@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.uzlahalya.beosis4.databinding.ActivityDetailScholarshipBinding
 import com.uzlahalya.beosis4.fragment.ArticleFragment
 import com.uzlahalya.beosis4.fragment.HomeFragment
+import com.uzlahalya.beosis4.model.ScholarshipItem
 import kotlinx.android.synthetic.main.activity_detail_scholarship.*
 
 class DetailScholarshipActivity : AppCompatActivity() {
@@ -25,10 +26,15 @@ class DetailScholarshipActivity : AppCompatActivity() {
         "for more information click google.com/" +
                 "open android.com"
 
+    companion object{
+        const val EXTRA_SCHOLARSHIP = "extra_scholarship"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         detailScholarshipBinding = ActivityDetailScholarshipBinding.inflate(layoutInflater)
         setContentView(detailScholarshipBinding.root)
+
 
         supportActionBar?.hide()
 //        ib_arrow_back_detailscholarship.setOnClickListener {
@@ -41,28 +47,43 @@ class DetailScholarshipActivity : AppCompatActivity() {
 //            )
 //        }
 
-        getIntent().getStringExtra("SCHOLARSHIPLOGO")
-            ?.let { detailScholarshipBinding.ivImageDetailscholarship.setImageResource(it.toInt()) }
-        detailScholarshipBinding.tvTitleScholarshipDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPNAME")
-        detailScholarshipBinding.tvUniDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPUNIVERSITY")
-        detailScholarshipBinding.tvCountryDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPCOUNTRY")
-        detailScholarshipBinding.tvMajorDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPMAJOR")
-        detailScholarshipBinding.tvDegreeDetailScholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPDEGREE")
-        detailScholarshipBinding.tvDateOpenregistrationDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPOPENREGISTRATION")
-        detailScholarshipBinding.tvDateDeadlineDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPCLOSEREGRISTRATION")
-        detailScholarshipBinding.tvLink.text =
-            getIntent().getStringExtra("SCHOLARSHIPLINK")
-        detailScholarshipBinding.tvBenefitDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPBENEFIT")
-        detailScholarshipBinding.tvRequirementsDetailscholarship.text =
-            getIntent().getStringExtra("SCHOLARSHIPREQUIREMENTS")
+        val dataScholar = intent.getParcelableExtra<ScholarshipItem>(EXTRA_SCHOLARSHIP)
+
+        detailScholarshipBinding.apply {
+            tvTitleScholarshipDetailscholarship.text = dataScholar?.scholarshipName
+            tvUniDetailscholarship.text = dataScholar?.universityName
+            tvCountryDetailscholarship.text = dataScholar?.country
+            tvMajorDetailscholarship.text = dataScholar?.major
+            tvDegreeDetailScholarship.text = dataScholar?.degree
+            tvDateOpenregistrationDetailscholarship.text = dataScholar?.openRegister
+            tvDateDeadlineDetailscholarship.text = dataScholar?.closeRegister
+            tvLink.text = dataScholar?.link
+            tvBenefitDetailscholarship.text = dataScholar?.benefits
+            tvRequirementsDetailscholarship.text = dataScholar?.requirements
+        }
+
+//        getIntent().getStringExtra("SCHOLARSHIPLOGO")
+//            ?.let { detailScholarshipBinding.ivImageDetailscholarship.setImageResource(it.toInt()) }
+//        detailScholarshipBinding.tvTitleScholarshipDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPNAME")
+//        detailScholarshipBinding.tvUniDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPUNIVERSITY")
+//        detailScholarshipBinding.tvCountryDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPCOUNTRY")
+//        detailScholarshipBinding.tvMajorDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPMAJOR")
+//        detailScholarshipBinding.tvDegreeDetailScholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPDEGREE")
+//        detailScholarshipBinding.tvDateOpenregistrationDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPOPENREGISTRATION")
+//        detailScholarshipBinding.tvDateDeadlineDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPCLOSEREGRISTRATION")
+//        detailScholarshipBinding.tvLink.text =
+//            getIntent().getStringExtra("SCHOLARSHIPLINK")
+//        detailScholarshipBinding.tvBenefitDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPBENEFIT")
+//        detailScholarshipBinding.tvRequirementsDetailscholarship.text =
+//            getIntent().getStringExtra("SCHOLARSHIPREQUIREMENTS")
 
         clickablelink(longTextWithLinks)
     }

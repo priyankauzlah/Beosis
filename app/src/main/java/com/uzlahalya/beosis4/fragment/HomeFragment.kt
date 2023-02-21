@@ -124,6 +124,7 @@
 class HomeFragment : Fragment(), ScholarshipAdapterr.onScholarshipItemClickListener,
         MostPopularAdapter.onMostPopularItemClickListener {
 
+
         private var homeBinding: HomeFragment? = null
         lateinit var rvExploreMore: RecyclerView
         lateinit var rvMostPopular: RecyclerView

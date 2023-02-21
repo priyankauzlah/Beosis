@@ -9,6 +9,6 @@ interface ApiEndPoint {
     @GET("lecture/get")
     fun getData(): Call<ScholarshipResponse>
 
-    @GET("lecture/search/name/{search}")
-    fun searchItem(@Query("search") data: String?): Call<ScholarshipResponse?>?
+//    @GET("lecture/search/name/{search}")
+//    fun searchItem(@Query("search") data: String?): Call<ScholarshipResponse?>?
 }

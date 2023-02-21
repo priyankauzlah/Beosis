@@ -1,13 +1,19 @@
 package com.uzlahalya.beosis4.data
 
 import android.app.Activity
+import android.content.ClipData
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.activity.DetailScholarshipActivity
+import com.uzlahalya.beosis4.databinding.ItemScholarshipBinding
+import com.uzlahalya.beosis4.model.ScholarshipItem
 
 class ScholarshipAdapterr(
     var data: ArrayList<Scholarship>,
@@ -15,26 +21,24 @@ class ScholarshipAdapterr(
     var clickListener: onScholarshipItemClickListener
 ) : RecyclerView.Adapter<ScholarshipAdapterr.MyViewHolder>() {
 
-    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val scholarshipLogo = view.findViewById<ImageView>(R.id.iv_image_item_scholar)
-        val scholarshipName = view.findViewById<TextView>(R.id.tv_title_item_scholar)
-        val scholarshipUniversity = view.findViewById<TextView>(R.id.tv_uni_item_scholar)
-        val scholarshipCountry = view.findViewById<TextView>(R.id.tv_country_item_scholar)
-        val scholarshipDegree = view.findViewById<TextView>(R.id.tv_level_item_scholar)
-        val scholarshipCloseregistration =
-            view.findViewById<TextView>(R.id.tv_date_deadline_detailscholarship)
+    private var dataScholarship : List<ScholarshipItem> = listOf()
 
+    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val binding = ItemScholarshipBinding.bind(view)
 
-        fun initialize(item: Scholarship, action: ScholarshipAdapterr.onScholarshipItemClickListener) {
-            scholarshipLogo.setImageResource(item.logo)
-            scholarshipName.text = item.name
-            scholarshipUniversity.text = item.university
-            scholarshipCountry.text = item.country
-            scholarshipDegree.text = item.degree
-            scholarshipCloseregistration.text = item.closeregistration
+        fun initialize(ship: ScholarshipItem) {
+            binding.apply {
+                tvTitleItemScholar.text = ship.scholarshipName
+                tvUniItemScholar.text = ship.universityName
+                tvCountryItemScholar.text = ship.country
+                tvLevelItemScholar.text = ship.degree
+                tvDateDeadlineDetailscholarship.text = ship.closeRegister
 
-            itemView.setOnClickListener {
-                action.onItemClick(item, adapterPosition)
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailScholarshipActivity::class.java)
+                    intent.putExtra(DetailScholarshipActivity.EXTRA_SCHOLARSHIP, ship)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }
@@ -46,7 +50,8 @@ class ScholarshipAdapterr(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.initialize(data.get(position), clickListener)
+//        holder.initialize(data.get(position), clickListener)
+        holder.initialize(dataScholarship[position])
     }
 
     override fun getItemCount(): Int {
