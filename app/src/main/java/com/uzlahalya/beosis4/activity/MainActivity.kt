@@ -46,11 +46,12 @@ class MainActivity : AppCompatActivity() {
                     val dataScholarship = scholarshipItem
                     val scholarshipAdapterr = ScholarshipAdapterr()
 
+
                 }
             }
 
             override fun onFailure(call: Call<ScholarshipItem>, t: Throwable) {
-                TODO("Not yet implemented")
+
             }
 
         })
