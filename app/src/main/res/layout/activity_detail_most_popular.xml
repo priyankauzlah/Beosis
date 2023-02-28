@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DetailScholarshipActivity">
+    tools:context=".activity.DetailMostPopularActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_image_detailscholarship"
+                android:id="@+id/iv_image_detail_popular_scholarship"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:contentDescription="@string/image_view"
@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/ib_arrow_back_detail_scholarship"
+                android:id="@+id/ib_arrow_back_detail_popular_scholarship"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_25dp"
@@ -43,7 +43,7 @@
                 app:tint="@color/white" />
 
             <ImageButton
-                android:id="@+id/ib_saved_detailscholarship"
+                android:id="@+id/ib_saved_detail_popular_scholarship"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
@@ -56,20 +56,20 @@
                 app:tint="@color/white" />
 
             <ImageView
-                android:id="@+id/iv_background_detail"
+                android:id="@+id/iv_background_detail_popular_scholarship"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
                 android:contentDescription="@string/image_view"
                 android:src="@drawable/background_detail_scholarship"
-                app:layout_constraintBottom_toTopOf="@id/rv_openregistration_detailscholarship"
+                app:layout_constraintBottom_toTopOf="@id/rv_openregistration_detail_popular_scholarship"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_title_scholarship_detailscholarship"
+                android:id="@+id/tv_title_scholarship_detail_popular_scholarship"
                 android:layout_width="@dimen/_360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -80,51 +80,51 @@
                 android:text="@string/kaist"
                 android:textColor="@color/white"
                 android:textSize="25sp"
-                app:layout_constraintBottom_toTopOf="@id/tv_uni_detailscholarship"
-                app:layout_constraintEnd_toEndOf="@+id/iv_background_detail"
+                app:layout_constraintBottom_toTopOf="@id/tv_uni_detail_popular_scholarship"
+                app:layout_constraintEnd_toEndOf="@+id/iv_background_detail_popular_scholarship"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/iv_background_detail" />
+                app:layout_constraintTop_toTopOf="@+id/iv_background_detail_popular_scholarship" />
 
             <TextView
-                android:id="@+id/tv_uni_detailscholarship"
+                android:id="@+id/tv_uni_detail_popular_scholarship"
                 android:layout_width="@dimen/_360dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/korea_advanced_institute_of_science_and_technology"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@id/tv_country_detailscholarship"
-                app:layout_constraintEnd_toEndOf="@+id/tv_title_scholarship_detailscholarship"
+                app:layout_constraintBottom_toTopOf="@id/tv_country_detail_popular_scholarship"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title_scholarship_detail_popular_scholarship"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_title_scholarship_detailscholarship"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title_scholarship_detailscholarship" />
+                app:layout_constraintStart_toStartOf="@+id/tv_title_scholarship_detail_popular_scholarship"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_scholarship_detail_popular_scholarship" />
 
             <TextView
-                android:id="@+id/tv_country_detailscholarship"
+                android:id="@+id/tv_country_detail_popular_scholarship"
                 android:layout_width="@dimen/_360dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/south_korea"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@id/rv_major_detail"
-                app:layout_constraintEnd_toEndOf="@+id/tv_uni_detailscholarship"
-                app:layout_constraintStart_toStartOf="@+id/tv_uni_detailscholarship"
-                app:layout_constraintTop_toBottomOf="@+id/tv_uni_detailscholarship" />
+                app:layout_constraintBottom_toTopOf="@id/rv_major_detail_popular_scholarship"
+                app:layout_constraintEnd_toEndOf="@+id/tv_uni_detail_popular_scholarship"
+                app:layout_constraintStart_toStartOf="@+id/tv_uni_detail_popular_scholarship"
+                app:layout_constraintTop_toBottomOf="@+id/tv_uni_detail_popular_scholarship" />
 
             <RelativeLayout
-                android:id="@+id/rv_major_detail"
+                android:id="@+id/rv_major_detail_popular_scholarship"
                 android:layout_width="@dimen/_360dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/outline_purple"
-                app:layout_constraintBottom_toTopOf="@id/tv_degree_detail_scholarship"
-                app:layout_constraintEnd_toEndOf="@+id/tv_country_detailscholarship"
-                app:layout_constraintStart_toStartOf="@+id/tv_country_detailscholarship"
-                app:layout_constraintTop_toBottomOf="@+id/tv_country_detailscholarship">
+                app:layout_constraintBottom_toTopOf="@id/tv_degree_detail_popular_scholarship"
+                app:layout_constraintEnd_toEndOf="@+id/tv_country_detail_popular_scholarship"
+                app:layout_constraintStart_toStartOf="@+id/tv_country_detail_popular_scholarship"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_detail_popular_scholarship">
 
                 <TextView
-                    android:id="@+id/tv_major_detailscholarship"
+                    android:id="@+id/tv_major_detail_popular_scholarship"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -143,7 +143,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/tv_degree_detail_scholarship"
+                android:id="@+id/tv_degree_detail_popular_scholarship"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10dp"
@@ -154,24 +154,24 @@
                 android:text="@string/undergraduate"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_background_detail"
-                app:layout_constraintStart_toStartOf="@+id/rv_major_detail"
-                app:layout_constraintTop_toBottomOf="@+id/rv_major_detail" />
+                app:layout_constraintBottom_toBottomOf="@+id/iv_background_detail_popular_scholarship"
+                app:layout_constraintStart_toStartOf="@+id/rv_major_detail_popular_scholarship"
+                app:layout_constraintTop_toBottomOf="@+id/rv_major_detail_popular_scholarship" />
 
 
             <RelativeLayout
-                android:id="@+id/rv_openregistration_detailscholarship"
+                android:id="@+id/rv_openregistration_detail_popular_scholarship"
                 android:layout_width="250dp"
                 android:layout_height="29dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:background="@drawable/background_open_registration"
-                app:layout_constraintBottom_toTopOf="@id/rv_deadline_detailscholarship"
+                app:layout_constraintBottom_toTopOf="@id/rv_deadline_detail_popular_scholarship"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_background_detail">
+                app:layout_constraintTop_toBottomOf="@+id/iv_background_detail_popular_scholarship">
 
                 <TextView
-                    android:id="@+id/tv_openregistration_detailscholarship"
+                    android:id="@+id/tv_openregistration_detail_popular_scholarship"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -185,13 +185,13 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tv_date_openregistration_detailscholarship"
+                    android:id="@+id/tv_date_openregistration_detail_popular_scholarship"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/tv_openregistration_detailscholarship"
+                    android:layout_alignBottom="@+id/tv_openregistration_detail_popular_scholarship"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="@dimen/_10dp"
-                    android:layout_toEndOf="@+id/tv_openregistration_detailscholarship"
+                    android:layout_toEndOf="@+id/tv_openregistration_detail_popular_scholarship"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text="2023-07-07"
@@ -201,17 +201,17 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rv_deadline_detailscholarship"
+                android:id="@+id/rv_deadline_detail_popular_scholarship"
                 android:layout_width="250dp"
                 android:layout_height="29dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:background="@drawable/background_deadline"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rv_openregistration_detailscholarship">
+                app:layout_constraintTop_toBottomOf="@+id/rv_openregistration_detail_popular_scholarship">
 
                 <TextView
-                    android:id="@+id/tv_deadline_detailscholarship"
+                    android:id="@+id/tv_deadline_detail_popular_scholarship"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -225,13 +225,13 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tv_date_deadline_detailscholarship"
+                    android:id="@+id/tv_date_deadline_detail_popular_scholarship"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/tv_deadline_detailscholarship"
+                    android:layout_alignBottom="@+id/tv_deadline_detail_popular_scholarship"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="@dimen/_10dp"
-                    android:layout_toEndOf="@+id/tv_deadline_detailscholarship"
+                    android:layout_toEndOf="@+id/tv_deadline_detail_popular_scholarship"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text="2023-07-07"
@@ -241,7 +241,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/tv_benefit"
+                android:id="@+id/tv_benefit_popular_scholarship"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20dp"
@@ -251,23 +251,23 @@
                 android:textSize="@dimen/_24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rv_deadline_detailscholarship" />
+                app:layout_constraintTop_toBottomOf="@+id/rv_deadline_detail_popular_scholarship" />
 
             <TextView
-                android:id="@+id/tv_benefit_detailscholarship"
+                android:id="@+id/tv_benefit_detail_popular_scholarship"
                 android:layout_width="327dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/benefit_text"
                 android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@id/tv_benefit"
+                app:layout_constraintEnd_toEndOf="@id/tv_benefit_popular_scholarship"
                 app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="@+id/tv_benefit"
-                app:layout_constraintTop_toBottomOf="@+id/tv_benefit" />
+                app:layout_constraintStart_toStartOf="@+id/tv_benefit_popular_scholarship"
+                app:layout_constraintTop_toBottomOf="@+id/tv_benefit_popular_scholarship" />
 
             <TextView
-                android:id="@+id/tv_requirements"
+                android:id="@+id/tv_requirements_popular_scholarship"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20dp"
@@ -277,26 +277,26 @@
                 android:textSize="@dimen/_24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_benefit_detailscholarship" />
+                app:layout_constraintTop_toBottomOf="@id/tv_benefit_detail_popular_scholarship" />
 
             <TextView
-                android:id="@+id/tv_requirements_detailscholarship"
+                android:id="@+id/tv_requirements_detail_popular_scholarship"
                 android:layout_width="327dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/requirements_text"
                 android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@id/tv_benefit_detailscholarship"
+                app:layout_constraintEnd_toEndOf="@id/tv_benefit_detail_popular_scholarship"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_requirements"
-                app:layout_constraintTop_toBottomOf="@id/tv_requirements" />
+                app:layout_constraintStart_toStartOf="@+id/tv_requirements_popular_scholarship"
+                app:layout_constraintTop_toBottomOf="@id/tv_requirements_popular_scholarship" />
 
             <Button
-                android:id="@+id/btn_more_information"
+                android:id="@+id/btn_more_information_most_popular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="150dp"
                 android:layout_marginBottom="@dimen/_50dp"
                 android:background="@drawable/background_button_green"
                 android:fontFamily="@font/poppins_medium"
@@ -307,10 +307,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.507"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_requirements_detailscholarship"
+                app:layout_constraintTop_toBottomOf="@id/tv_requirements_detail_popular_scholarship"
                 app:layout_constraintVertical_bias="0.0" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

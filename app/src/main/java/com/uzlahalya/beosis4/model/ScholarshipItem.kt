@@ -1,52 +1,46 @@
-package com.uzlahalya.beosis4.model
-
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
-import kotlinx.android.parcel.RawValue
 
 @Parcelize
 data class ScholarshipItem(
 
     @field:SerializedName("continent")
-    val continent: String,
+    val continent: String? = null,
 
     @field:SerializedName("benefits")
-    val benefits: String,
+    val benefits: String? = null,
 
     @field:SerializedName("country")
-    val country: String,
+    val country: String? = null,
+
+    @field:SerializedName("image")
+    val image: String? = null,
 
     @field:SerializedName("requirements")
-    val requirements: String,
+    val requirements: String? = null,
 
     @field:SerializedName("scholarship_name")
-    val scholarshipName: String,
+    val scholarshipName: String? = null,
 
     @field:SerializedName("close_register")
-    val closeRegister: String,
+    val closeRegister: String? = null,
 
     @field:SerializedName("degree")
-    val degree: String,
+    val degree: String? = null,
 
     @field:SerializedName("link")
-    val link: String,
-
-    @field:SerializedName("created_at")
-    val createdAt: @RawValue Any,
+    val link: String? = null,
 
     @field:SerializedName("open_register")
-    val openRegister: String,
+    val openRegister: String? = null,
 
     @field:SerializedName("university_name")
-    val universityName: String,
+    val universityName: String? = null,
 
     @field:SerializedName("major")
-    val major: String,
-
-    @field:SerializedName("updated_at")
-    val updatedAt: @RawValue Any,
+    val major: String? = null,
 
     @field:SerializedName("id")
-    val id: Int
+    val id: Int? = null
 ) : Parcelable

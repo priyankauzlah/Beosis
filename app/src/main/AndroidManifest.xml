@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Beosis4">
         <activity
+            android:name=".activity.DetailMostPopularActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DetailArticleActivity"
             android:exported="false" />
         <activity

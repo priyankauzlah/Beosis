@@ -3,7 +3,6 @@ package com.uzlahalya.beosis4.data
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
-
 @Parcelize
 data class MostPopular(
     var logo: Int = 0,

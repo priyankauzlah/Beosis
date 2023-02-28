@@ -1,4 +1,4 @@
-package com.uzlahalya.beosis4.data
+package com.uzlahalya.beosis4.adapter
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.data.Scholarship
+import java.util.*
 
 class MostPopularAdapter(
     var data: ArrayList<Scholarship>,
@@ -21,9 +23,6 @@ class MostPopularAdapter(
         val scholarshipUniversity = view.findViewById<TextView>(R.id.tv_uni_mostpopular)
         val scholarshipCountry = view.findViewById<TextView>(R.id.tv_country_mostpopular)
         val scholarshipDegree = view.findViewById<TextView>(R.id.tv_level_mostpopular)
-        val scholarshipCloseregistration =
-            view.findViewById<TextView>(R.id.tv_date_deadline_detailscholarship)
-
 
         fun initialize(item: Scholarship, action: onMostPopularItemClickListener) {
             scholarshipLogo.setImageResource(item.logo)
@@ -31,7 +30,6 @@ class MostPopularAdapter(
             scholarshipUniversity.text = item.university
             scholarshipCountry.text = item.country
             scholarshipDegree.text = item.degree
-            scholarshipCloseregistration.text = item.closeregistration
 
             itemView.setOnClickListener {
                 action.onItemClick(item, adapterPosition)
