@@ -8,6 +8,5 @@ interface ApiArticle {
 
     @GET("Article")
     fun getDataArticle(
-
     ): Call<ArticleResponse>
 }

@@ -9,8 +9,11 @@ import retrofit2.http.GET
 interface ApiScholarship {
     @GET("Scholarship")
     fun getDataScholarship(
-
     ): Response<ScholarshipResponse>
+
+    @GET("Article")
+    fun getDataArticle(
+    ): Call<ArticleResponse>
 
 //    @GET("lecture/search/name/{search}")
 //    fun searchItem(@Query("search") data: String?): Call<ScholarshipResponse?>?
