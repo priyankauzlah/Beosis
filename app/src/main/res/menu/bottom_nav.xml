@@ -6,17 +6,9 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
     <item
-        android:id="@+id/calendarFragment"
-        android:icon="@drawable/ic_calendar"
-        android:title="@string/calendar" />
-    <item
         android:id="@+id/articleFragment"
         android:icon="@drawable/ic_article"
         android:title="@string/article" />
-    <item
-        android:id="@+id/saveFragment"
-        android:icon="@drawable/ic_saved"
-        android:title="@string/save" />
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_profile"

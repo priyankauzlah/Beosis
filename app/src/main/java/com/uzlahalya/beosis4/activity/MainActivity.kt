@@ -37,14 +37,8 @@ class MainActivity : AppCompatActivity() {
             R.id.articleFragment -> {
                 currentFragment = ArticleFragment()
             }
-            R.id.calendarFragment -> {
-                currentFragment = CalendarFragment()
-            }
             R.id.homeFragment -> {
                 currentFragment = HomeFragment()
-            }
-            R.id.saveFragment -> {
-                currentFragment = SaveFragment()
             }
             R.id.profileFragment -> {
                 currentFragment = ProfileFragment()

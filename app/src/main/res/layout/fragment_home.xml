@@ -49,7 +49,6 @@
             android:id="@+id/tv_explore_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10dp"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/explore_more"
             android:textSize="18sp"
@@ -59,8 +58,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_explore_more"
             android:layout_width="wrap_content"
-            android:layout_height="356dp"
-            android:layout_marginBottom="50dp"
+            android:layout_height="366dp"
+            android:layout_marginBottom="70dp"
             app:layout_constraintBaseline_toBottomOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

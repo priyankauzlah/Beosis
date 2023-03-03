@@ -124,8 +124,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
 //            }
 //        }
 
-
-//        //pemanggilan retrofit dengan enqueue
         ApiService.getService().getDataScholarship().enqueue(object : retrofit2.Callback<ScholarshipResponse> {
             override fun onResponse(
                 call: Call<ScholarshipResponse>,
@@ -261,5 +259,4 @@ val ArrayMostPopularScholarship: ArrayList<Scholarship>
         arrayMostPopularScholarship.add(ioe)
 
         return arrayMostPopularScholarship
-
     }
