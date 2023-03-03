@@ -13,12 +13,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.play.core.internal.t
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.DetailMostPopularActivity
 import com.uzlahalya.beosis4.adapter.MostPopularAdapter
 import com.uzlahalya.beosis4.adapter.ScholarshipAdapter
 import com.uzlahalya.beosis4.data.Scholarship
 import com.uzlahalya.beosis4.databinding.FragmentHomeBinding
+import com.uzlahalya.beosis4.model.ArticleItem
+import com.uzlahalya.beosis4.model.ArticleResponse
 import com.uzlahalya.beosis4.model.ScholarshipResponse
 import com.uzlahalya.beosis4.mvvm.ApiService
 import com.uzlahalya.beosis4.mvvm.network.handler.NetworkResult
@@ -31,7 +34,7 @@ import java.util.*
 class HomeFragment : Fragment(), View.OnClickListener {
 
     private val scholarAdapter by lazy {
-        ScholarshipAdapter(requireContext())
+        ScholarshipAdapter(this)
     }
 
     private lateinit var rvScholarship: RecyclerView
@@ -88,64 +91,65 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         rvExploreMore = view.findViewById(R.id.rv_explore_more)
 
-        mainViewModel.scholarshipList.observe(viewLifecycleOwner) { result ->
-            when (result) {
-                is NetworkResult.Loading -> {
-                    handleUi(
-                        recyclerView = false,
-                        progressbar = true,
-                        errorTv = false
-                    )
-                }
-                is NetworkResult.Error -> {
-                    binding.tvError.text = result.errorMessage
-                    handleUi(
-                        recyclerView = false,
-                        progressbar = false,
-                        errorTv = true
-                    )
-                }
-                is NetworkResult.Success -> {
-
-                    val scholarshipAdapter = ScholarshipAdapter()
-                    Log.d("SUCCESS", "Success retrivied data")
-                    scholarshipAdapter.setData(result.data?.scholarship as List<ScholarshipItem>)
-
-                    binding.rvExploreMore.apply {
-                        layoutManager = LinearLayoutManager(requireContext())
-                        setHasFixedSize(true)
-                        adapter = scholarshipAdapter
-                    }
-                    handleUi(recyclerView = true, progressbar = false, errorTv = false)
-                }
-            }
-        }
-
-
-        //pemanggilan retrofit dengan enqueue
-//        ApiService.getService().getData().enqueue(object : Callback<ScholarshipResponse> {
-//            override fun onResponse(
-//                call: Call<ScholarshipResponse>,
-//                response: Response<ScholarshipResponse>
-//            ) {
-////                loading.dismiss()
-//                Log.d("Data", "Response: ${response.isSuccessful}")
+//        mainViewModel.scholarshipList.observe(viewLifecycleOwner) { result ->
+//            when (result) {
+//                is NetworkResult.Loading -> {
+//                    handleUi(
+//                        recyclerView = false,
+//                        progressbar = true,
+//                        errorTv = false
+//                    )
+//                }
+//                is NetworkResult.Error -> {
+//                    binding.tvError.text = result.errorMessage
+//                    handleUi(
+//                        recyclerView = false,
+//                        progressbar = false,
+//                        errorTv = true
+//                    )
+//                    Toast.makeText(requireContext(),result.errorMessage,Toast.LENGTH_SHORT).show()
+//                }
+//                is NetworkResult.Success -> {
+//                    val scholarshipAdapter = ScholarshipAdapter(this)
+//                    Log.d("SUCCESS", "Success retrivied data")
+//                    scholarshipAdapter.setData(result.data?.scholarship as List<ScholarshipItem>)
 //
-//                if (response.isSuccessful) {
-//                    Log.d("SUCCES", "Success retreived data")
-//                    val responseScholar = response.body()
-//                    val dataScholar = responseScholar?.scholarship
-//                    scholarAdapter.setData(dataScholar as List<ScholarshipItem>)
+//                    binding.rvExploreMore.apply {
+//                        layoutManager = LinearLayoutManager(requireContext())
+//                        setHasFixedSize(true)
+//                        adapter = scholarshipAdapter
+//                    }
+//                    handleUi(recyclerView = true, progressbar = false, errorTv = false)
 //                }
 //            }
-//
-//            override fun onFailure(call: Call<ScholarshipResponse>, t: Throwable) {
-//                Log.d("Error","Error pada : "+t.localizedMessage)
-//            }
-//        })
-//        rvExploreMore.setHasFixedSize(true)
-//        rvExploreMore.layoutManager = lmExploreMore
-//        rvExploreMore.adapter = scholarAdapter
+//        }
+
+
+//        //pemanggilan retrofit dengan enqueue
+        ApiService.getService().getDataScholarship().enqueue(object : retrofit2.Callback<ScholarshipResponse> {
+            override fun onResponse(
+                call: Call<ScholarshipResponse>,
+                response: Response<ScholarshipResponse>
+            ) {
+                Log.d("Data", "Response: ${response.isSuccessful}")
+
+                if (response.isSuccessful) {
+                    Log.d("SUCCESS", "Success retrieved data")
+                    val responseScholar = response.body()
+                    val dataScholar = responseScholar?.scholarship
+                    scholarAdapter.setData(dataScholar as List<ScholarshipItem>)
+                }
+            }
+
+            override fun onFailure(call: Call<ScholarshipResponse>, t: Throwable) {
+                Log.d("Error","Error pada : "+t.localizedMessage)
+            }
+
+        })
+
+        rvExploreMore.setHasFixedSize(true)
+        rvExploreMore.layoutManager = lmExploreMore
+        rvExploreMore.adapter = scholarAdapter
 
         return view
     }

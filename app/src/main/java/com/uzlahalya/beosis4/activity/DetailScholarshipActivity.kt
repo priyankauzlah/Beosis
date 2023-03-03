@@ -42,7 +42,7 @@ class DetailScholarshipActivity : AppCompatActivity() {
         val dataScholar = intent.getParcelableExtra<ScholarshipItem>(EXTRA_SCHOLARSHIP)
 
         detailScholarshipBinding.apply {
-
+            Glide.with(applicationContext).load(dataScholar?.image).into(ivImageDetailscholarship);
             tvTitleScholarshipDetailscholarship.text = dataScholar?.scholarshipName
             tvUniDetailscholarship.text = dataScholar?.universityName
             tvCountryDetailscholarship.text = dataScholar?.country

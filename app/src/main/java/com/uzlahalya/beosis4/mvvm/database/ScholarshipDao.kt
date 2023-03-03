@@ -11,7 +11,7 @@ interface ScholarshipDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertScholarship(scholarshipEntity: ScholarshipEntity)
 
-    @Query("SELECT * FROM scholarship_table_name ORDER BY id ASC")
+    @Query("SELECT * FROM SCHOLARSHIP_TABLE_NAME ORDER BY id ASC")
     fun listScholarship(): Flow<List<ScholarshipEntity>>
 
     @Delete()

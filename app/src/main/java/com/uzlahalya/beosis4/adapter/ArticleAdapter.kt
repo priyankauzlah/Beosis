@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.DetailArticleActivity
 import com.uzlahalya.beosis4.databinding.ItemArticleBinding
@@ -20,6 +21,7 @@ class ArticleAdapter(var context: Context) : RecyclerView.Adapter<ArticleAdapter
 
         fun initializing(article: ArticleItem) {
             binding.apply {
+                Glide.with(context).load(article.image).into(ivImageItemArticle);
                 tvTitleItemArticle.text = article.articleTitle
                 tvCountryNameArticle.text = article.country
 

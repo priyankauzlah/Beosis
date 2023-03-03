@@ -1,7 +1,6 @@
 package com.uzlahalya.beosis4.adapter
 
 import ScholarshipItem
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -12,9 +11,10 @@ import com.google.android.gms.common.util.CollectionUtils.listOf
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.activity.DetailScholarshipActivity
 import com.uzlahalya.beosis4.databinding.ItemScholarshipBinding
+import com.uzlahalya.beosis4.fragment.HomeFragment
 
 class ScholarshipAdapter(
-    var context: Context,
+    var context: HomeFragment,
 ) : RecyclerView.Adapter<ScholarshipAdapter.MyViewHolder>() {
 
     private var dataScholarship : List<ScholarshipItem> = listOf()
@@ -25,7 +25,7 @@ class ScholarshipAdapter(
 
         fun initialize(ship: ScholarshipItem) {
             binding.apply {
-                Glide.with(context).load(ship.image).centerCrop().into(ivImageItemScholar)
+                Glide.with(context).load(ship.image).into(ivImageItemScholar);
                 tvTitleItemScholar.text = ship.scholarshipName
                 tvUniItemScholar.text = ship.universityName
                 tvCountryItemScholar.text = ship.country

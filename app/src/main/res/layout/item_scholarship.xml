@@ -28,7 +28,7 @@
             android:layout_marginBottom="@dimen/_10dp"
             android:contentDescription="@string/image_view"
             android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/asean_undergraduate" />
 
         <TextView
             android:id="@+id/tv_title_item_scholar"

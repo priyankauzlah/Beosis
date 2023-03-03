@@ -55,25 +55,25 @@ class ArticleFragment : Fragment(), View.OnClickListener {
 
         rvArticle = view.findViewById(R.id.rv_article)
 
-//        ApiService.getService().getDataArticle().enqueue(object : Callback<ArticleResponse> {
-//            override fun onResponse(
-//                call: Call<ArticleResponse>,
-//                response: Response<ArticleResponse>
-//            ) {
-////                loading.dismiss()
-//                Log.d("Data", "Response: ${response.isSuccessful}")
-//
-//                if (response.isSuccessful) {
-//                    Log.d("SUCCES", "Success retreived data")
-//                    val responseArticle = response.body()
-//                    val dataArticle = responseArticle?.article
-//                    articleAdapter.setData(dataArticle as List<ArticleItem>)
-//                }
-//            }
-//            override fun onFailure(call: Call<ArticleResponse>, t: Throwable) {
-//                Log.d("Error","Error pada : "+t.localizedMessage)
-//            }
-//        })
+        ApiService.getArticleService().getDataArticle().enqueue(object : Callback<ArticleResponse> {
+            override fun onResponse(
+                call: Call<ArticleResponse>,
+                response: Response<ArticleResponse>
+            ) {
+//                loading.dismiss()
+                Log.d("Data", "Response: ${response.isSuccessful}")
+
+                if (response.isSuccessful) {
+                    Log.d("SUCCES", "Success retrieved data")
+                    val responseArticle = response.body()
+                    val dataArticle = responseArticle?.article
+                    articleAdapter.setData(dataArticle as List<ArticleItem>)
+                }
+            }
+            override fun onFailure(call: Call<ArticleResponse>, t: Throwable) {
+                Log.d("Error","Error pada : "+t.localizedMessage)
+            }
+        })
 
         rvArticle.setHasFixedSize(true)
         rvArticle.layoutManager = lmArticle
