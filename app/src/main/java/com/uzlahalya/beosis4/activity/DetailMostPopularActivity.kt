@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.data.Scholarship
 import com.uzlahalya.beosis4.databinding.ActivityDetailMostPopularBinding
@@ -33,9 +34,10 @@ class DetailMostPopularActivity : AppCompatActivity() {
         val dataMostPopular = intent.getParcelableExtra<Scholarship>(EXTRA_MOST_POPULAR)
 
         detailMostPopularBinding.apply {
-            if (dataMostPopular != null) {
-                ivImageDetailPopularScholarship.setImageResource(dataMostPopular.logo)
+            dataMostPopular?.let {
+                Glide.with(this@DetailMostPopularActivity).load(dataMostPopular.logo).into(ivImageDetailPopularScholarship)
             }
+
             tvTitleScholarshipDetailPopularScholarship.text = dataMostPopular?.name
             tvUniDetailPopularScholarship.text = dataMostPopular?.university
             tvCountryDetailPopularScholarship.text = dataMostPopular?.country

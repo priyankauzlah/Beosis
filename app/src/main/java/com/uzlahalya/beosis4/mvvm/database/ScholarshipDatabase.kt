@@ -8,26 +8,25 @@ import androidx.room.*
     version = 1,
     exportSchema = false
 )
-
-@TypeConverters(ScholarshipTypeConverter::class)
 abstract class ScholarshipDatabase: RoomDatabase() {
 
     abstract fun scholarshipDao(): ScholarshipDao
 
-    companion object{
+    companion object {
+        const val DATABASE_NAME = "scholarship_database"
+
         @Volatile
         private var instance: ScholarshipDatabase? = null
 
         fun getDatabase(context: Context): ScholarshipDatabase {
             val tempInstance = instance
-            if (tempInstance != null){
+            if (tempInstance != null) {
                 instance = tempInstance
             }
-            synchronized(this){
+            synchronized(this) {
                 val newInstance = Room.databaseBuilder(
-                    context.applicationContext, ScholarshipDatabase::class.java,
-                    "scholarship_database"
-                    ).build()
+                    context.applicationContext, ScholarshipDatabase::class.java, DATABASE_NAME
+                ).build()
 
                 instance = newInstance
                 return  newInstance

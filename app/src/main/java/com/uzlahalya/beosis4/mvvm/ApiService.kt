@@ -1,26 +1,20 @@
 package com.uzlahalya.beosis4.mvvm
 
-import com.google.gson.GsonBuilder
-import com.uzlahalya.beosis4.mvvm.network.api.ApiArticle
-import com.uzlahalya.beosis4.mvvm.network.api.ApiScholarship
-import okhttp3.OkHttpClient
+import com.uzlahalya.beosis4.mvvm.network.api.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
-object ApiService {
+class ApiSource {
 
-    val BASE_URL: String = "https://beosisapp.smkidnakhwat.com/api/"
+    companion object {
+        const val BASE_URL: String = "https://beosisapp.smkidnakhwat.com/api/"
 
-    private fun getRetrofit() : Retrofit{
-        return Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
-    }
-
-     fun getService(): ApiScholarship {
-            return getRetrofit().create(ApiScholarship::class.java)
+        private fun getRetrofit() : Retrofit{
+            return Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
         }
 
-    fun getArticleService(): ApiArticle {
-        return getRetrofit().create(ApiArticle::class.java)
+        fun getApiService(): ApiService {
+            return getRetrofit().create(ApiService::class.java)
+        }
     }
 }

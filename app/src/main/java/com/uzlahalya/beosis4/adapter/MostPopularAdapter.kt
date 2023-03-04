@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.uzlahalya.beosis4.R
 import com.uzlahalya.beosis4.data.Scholarship
 import java.util.*
@@ -25,7 +26,7 @@ class MostPopularAdapter(
         val scholarshipDegree = view.findViewById<TextView>(R.id.tv_level_mostpopular)
 
         fun initialize(item: Scholarship, action: onMostPopularItemClickListener) {
-            scholarshipLogo.setImageResource(item.logo)
+            Glide.with(itemView).load(item.logo).into(scholarshipLogo)
             scholarshipName.text = item.name
             scholarshipUniversity.text = item.university
             scholarshipCountry.text = item.country

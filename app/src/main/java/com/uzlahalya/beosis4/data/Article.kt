@@ -5,8 +5,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Article (
-    var image : Int = 0,
-    var title : String? = null,
-    var country : String? = null,
-    var content : String? = null,
-):Parcelable
+    var image: String,
+    var title: String,
+    var country: String,
+    var content: String,
+): Parcelable
