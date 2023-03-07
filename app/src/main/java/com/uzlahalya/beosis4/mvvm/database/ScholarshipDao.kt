@@ -1,19 +1,17 @@
 package com.uzlahalya.beosis4.mvvm.database
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface ScholarshipDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertScholarship(scholarshipEntity: ScholarshipEntity)
+    fun insertScholarship(scholarshipEntity: ScholarshipEntity)
 
     @Query("SELECT * FROM SCHOLARSHIP_TABLE_NAME ORDER BY id ASC")
     fun listScholarship(): Flow<List<ScholarshipEntity>>
 
-    @Delete()
-    suspend fun deleteScholarship(scholarshipEntity: ScholarshipEntity)
+    @Delete
+    fun deleteScholarship(scholarshipEntity: ScholarshipEntity)
 }

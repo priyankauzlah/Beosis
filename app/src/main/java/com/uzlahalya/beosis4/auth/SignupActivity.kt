@@ -49,11 +49,11 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
         val email: String = signupBinding.etEmailSignup.text.toString()
         val password: String = signupBinding.etPasswordSignup.text.toString()
         if (userName == "") {
-            Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.txt_usn_unfilled), Toast.LENGTH_SHORT).show()
         } else if (email == "") {
-            Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.txt_usn_unfilled), Toast.LENGTH_SHORT).show()
         } else if (password == "") {
-            Toast.makeText(this, getString(R.string.txt_error), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.txt_pass_unfilled), Toast.LENGTH_SHORT).show()
         } else {
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { it ->
                 if (it.isSuccessful) {
@@ -75,6 +75,7 @@ class SignupActivity : AppCompatActivity(), View.OnClickListener {
                             finish()
                         }
                     }
+                    Toast.makeText(this, getString(R.string.txt_account_success), Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(
                         this, getString(R.string.txt_error_register) + it.exception!!

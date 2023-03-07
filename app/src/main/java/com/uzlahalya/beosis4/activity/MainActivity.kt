@@ -1,5 +1,6 @@
 package com.uzlahalya.beosis4.activity
 
+import ArticleFragment
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

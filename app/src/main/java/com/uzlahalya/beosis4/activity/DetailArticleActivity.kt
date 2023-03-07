@@ -1,17 +1,10 @@
 package com.uzlahalya.beosis4.activity
 
-import ScholarshipItem
-import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.OnBackPressedCallback
-import com.uzlahalya.beosis4.R
+import com.uzlahalya.beosis4.data.Article
 import com.uzlahalya.beosis4.databinding.ActivityDetailArticleBinding
-import com.uzlahalya.beosis4.fragment.ArticleFragment
-import com.uzlahalya.beosis4.model.ArticleItem
 import kotlinx.android.synthetic.main.activity_detail_article.*
-import kotlinx.android.synthetic.main.activity_detail_scholarship.*
 
 class DetailArticleActivity : AppCompatActivity() {
 
@@ -32,13 +25,14 @@ class DetailArticleActivity : AppCompatActivity() {
             finish()
         }
 
-        val dataArticle = intent.getParcelableExtra<ArticleItem>(DetailArticleActivity.EXTRA_ARTICLE)
+        val dataArticle = intent.getParcelableExtra<Article>(DetailArticleActivity.EXTRA_ARTICLE)
 
         detailArticleBinding.apply {
 
-            tvTitleDetailarticle.text = dataArticle?.articleTitle
+            tvTitleDetailarticle.text = dataArticle?.title
             tvCountryNameDetailarticle.text = dataArticle?.country
-            tvContentDetailarticle.text = dataArticle?.articleContent
+            tvContentDetailarticle.text = dataArticle?.content
+            tv_source_link.text = dataArticle?.url
         }
     }
 }

@@ -1,12 +1,8 @@
 package com.uzlahalya.beosis4.model
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 data class ArticleItem(
-
     @field:SerializedName("country")
     val country: String? = null,
 
@@ -24,4 +20,4 @@ data class ArticleItem(
 
     @field:SerializedName("url")
     val url: String? = null
-) : Parcelable
+)

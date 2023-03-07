@@ -194,6 +194,7 @@
                     android:layout_toEndOf="@+id/tv_openregistration_detailscholarship"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
+                    android:maxLines="1"
                     android:text="2023-07-07"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
@@ -234,6 +235,7 @@
                     android:layout_toEndOf="@+id/tv_deadline_detailscholarship"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
+                    android:maxLines="1"
                     android:text="2023-07-07"
                     android:textColor="@color/black"
                     android:textSize="15sp" />

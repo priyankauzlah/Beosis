@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.ArticleFragment">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,10 +39,19 @@
                 android:id="@+id/chips_continentsType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:checkedChip="@+id/chips_continentsType_asia"
+                app:checkedChip="@+id/chips_continentsType_all"
                 app:selectionRequired="true"
                 app:singleLine="true"
                 app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chips_continentsType_all"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="All"
+                    android:textSize="17sp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chips_continentsType_asia"
@@ -51,16 +59,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/asia" />
-
+                    android:text="@string/asia"
+                    android:textSize="17sp" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chips_continentsType_merica"
+                    android:id="@+id/chips_continentsType_america"
                     style="@style/CustomChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/america" />
+                    android:text="@string/america"
+                    android:textSize="17sp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chips_continentsType_europe"
@@ -68,7 +77,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/europe" />
+                    android:text="@string/europe"
+                    android:textSize="17sp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chips_continentsType_australia"
@@ -76,7 +86,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/australia" />
+                    android:text="@string/australia"
+                    android:textSize="17sp" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chips_continentsType_africa"
@@ -84,7 +95,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/africa" />
+                    android:text="@string/africa"
+                    android:textSize="17sp" />
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 

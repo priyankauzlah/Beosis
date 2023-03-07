@@ -5,15 +5,16 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Scholarship(
-    var logo: Int = 0,
-    var name: String? = null,
-    var university: String? = null,
-    var country: String? = null,
-    var majors: String? = null,
-    var degree: String? = null,
-    var closeregistration: String? = null,
-    var link: String? = null,
-    var openregistration: String? = null,
-    var benefit : String? = null,
-    var requirement : String? = null
+    var id: String,
+    var logo: String,
+    var name: String,
+    var university: String,
+    var country: String,
+    var majors: String,
+    var degree: String,
+    var closeregistration: String,
+    var link: String,
+    var openregistration: String,
+    var benefit : String,
+    var requirement : String
 ) : Parcelable

@@ -1,15 +1,21 @@
 package com.uzlahalya.beosis4.mvvm.database
 
-import ScholarshipItem
-import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "SCHOLARSHIP_TABLE_NAME")
-@Parcelize
 data class ScholarshipEntity(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
-    val scholarship: ScholarshipItem
-): Parcelable
+    @PrimaryKey(autoGenerate = false)
+    val id: Int,
+    val logo: String,
+    val name: String,
+    val university: String,
+    val country: String,
+    val majors: String,
+    val degree: String,
+    val closeregistration: String,
+    val link: String,
+    val openregistration: String,
+    val benefit : String,
+    val requirement : String
+)

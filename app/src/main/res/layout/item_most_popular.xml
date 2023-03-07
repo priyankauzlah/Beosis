@@ -58,7 +58,7 @@
             android:maxLines="1"
             android:text="@string/korea_advanced_institute"
             android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_country_mostpopular"
@@ -73,14 +73,14 @@
             android:maxLines="1"
             android:text="@string/south_korea"
             android:textColor="#858585"
-            android:textSize="13sp" />
+            android:textSize="16sp"  />
 
         <TextView
             android:id="@+id/tv_level_mostpopular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_country_mostpopular"
-            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="@dimen/_10dp"
             android:layout_toEndOf="@+id/iv_image_mostpopular"
             android:background="@drawable/background_item_degree"
