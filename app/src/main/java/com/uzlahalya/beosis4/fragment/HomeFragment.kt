@@ -18,6 +18,7 @@ import com.uzlahalya.beosis4.data.Scholarship
 import com.uzlahalya.beosis4.databinding.FragmentHomeBinding
 import com.uzlahalya.beosis4.util.observeLiveData
 import com.uzlahalya.beosis4.viewmodel.MainViewModel
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), View.OnClickListener {
 
@@ -83,14 +84,17 @@ class HomeFragment : Fragment(), View.OnClickListener {
             owner =  viewLifecycleOwner,
             context = requireContext(),
             onSuccess = {
-                // TODO: Hide Loading
+                pb_home.visibility = View.GONE
+                tv_error.visibility = View.GONE
                 scholarAdapter.setData(it)
             },
             onLoading = {
-                // TODO: Show Loading
+                pb_home.visibility = View.VISIBLE
+                tv_error.visibility = View.VISIBLE
             },
             onFailure = {
-                // TODO: Hide Loading
+                pb_home.visibility = View.GONE
+                tv_error.visibility = View.VISIBLE
             }
         )
 

@@ -12,8 +12,6 @@ fun <U> LiveData<NetworkResult<U>>.observeLiveData(
     onSuccess: (U) -> Unit,
     onFailure: ((String) -> Unit)? = null
 ) {
-//    var apiError: ApiError
-
     this.observe(owner) {
         when (it) {
             is NetworkResult.Loading -> {

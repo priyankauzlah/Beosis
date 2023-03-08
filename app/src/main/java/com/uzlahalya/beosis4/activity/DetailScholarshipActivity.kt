@@ -3,7 +3,7 @@ package com.uzlahalya.beosis4.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -48,8 +48,12 @@ class DetailScholarshipActivity : AppCompatActivity() {
 
         ib_saved_detailscholarship.setOnClickListener {
             dataScholar?.let {
-                if (isFavorite) mainViewModel.deleteScholarship(it)
-                else mainViewModel.insertScholarship(it)
+                if (isFavorite){mainViewModel.deleteScholarship(it)
+                    Toast.makeText(this, "Delete from save", Toast.LENGTH_SHORT).show()
+                }
+                else{mainViewModel.insertScholarship(it)
+                    Toast.makeText(this, "Added to save", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -71,7 +75,7 @@ class DetailScholarshipActivity : AppCompatActivity() {
     }
 
     private fun setSavedState(isSaved: Boolean) {
-        ib_saved_detailscholarship.setImageResource(if (isSaved) R.drawable.ic_calendar else R.drawable.ic_saved)
+        ib_saved_detailscholarship.setImageResource(if (isSaved) R.drawable.saved else R.drawable.ic_save)
     }
 
     fun information(informationLink : String){

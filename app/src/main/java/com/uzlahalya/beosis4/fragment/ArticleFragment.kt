@@ -14,6 +14,9 @@ import com.uzlahalya.beosis4.adapter.ArticleAdapter
 import com.uzlahalya.beosis4.databinding.FragmentArticleBinding
 import com.uzlahalya.beosis4.util.observeLiveData
 import com.uzlahalya.beosis4.viewmodel.MainViewModel
+import kotlinx.android.synthetic.main.fragment_article.*
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.pb_home
 
 class ArticleFragment : Fragment(), View.OnClickListener {
 
@@ -59,7 +62,9 @@ class ArticleFragment : Fragment(), View.OnClickListener {
             owner = viewLifecycleOwner,
             context = requireContext(),
             onSuccess = {
-                // TODO: Hide Loading
+                pb_article.visibility = View.GONE
+                iv_error_article.visibility = View.GONE
+
                 if (it.isNotEmpty() && selectedCountry.isNotEmpty()) {
                     articleAdapter.filter.filter(selectedCountry)
                 }
@@ -67,10 +72,12 @@ class ArticleFragment : Fragment(), View.OnClickListener {
                 articleAdapter.setData(it)
             },
             onLoading = {
-                // TODO: Show Loading
+                pb_article.visibility = View.VISIBLE
+                iv_error_article.visibility = View.VISIBLE
             },
             onFailure = {
-                // TODO: Hide Loading
+                pb_article.visibility = View.GONE
+                iv_error_article.visibility = View.VISIBLE
             }
         )
 

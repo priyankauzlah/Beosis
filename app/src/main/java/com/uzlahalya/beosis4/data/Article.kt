@@ -9,5 +9,5 @@ data class Article (
     var title: String,
     var country: String,
     var content: String,
-    var url: String,
+    var url: String
 ): Parcelable

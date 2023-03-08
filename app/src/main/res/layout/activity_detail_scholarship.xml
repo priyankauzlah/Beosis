@@ -50,15 +50,15 @@
                 android:layout_marginEnd="@dimen/_25dp"
                 android:background="@drawable/background_purple"
                 android:contentDescription="@string/image_button"
-                android:src="@drawable/ic_saved"
+                android:src="@drawable/ic_save"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/white" />
 
             <ImageView
                 android:id="@+id/iv_background_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
                 android:layout_marginTop="200dp"
                 android:contentDescription="@string/image_view"
                 android:src="@drawable/background_detail_scholarship"
